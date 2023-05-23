@@ -6,6 +6,14 @@ To upload it, simply go to your FiveM KeyMaster area, and download again the scr
 
 <details>
 
+<summary>v1.2.1 - 05.22.2023</summary>
+
+* FIX > Compatibility issues with the vMenu disequip function
+
+</details>
+
+<details>
+
 <summary>v1.2.0 - 04.15.2023</summary>
 
 * NEW > You can now use customs notifications (customizable in a specific file "notifications.lua")
