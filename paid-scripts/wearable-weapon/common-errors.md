@@ -8,8 +8,6 @@
 
 This message indicates that you do not have permission to launch the Wearable Weapons resource.
 
-
-
 The causes can be multiple. We therefore advise you to check these different points :&#x20;
 
 * The Patreon key listed in your server.cfg does not contain a typing error.
