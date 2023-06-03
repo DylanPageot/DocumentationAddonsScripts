@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/Voyage Photo Général Linkedin Bannière (13).png
+coverY: 0
+---
+
 # 🚗 Madonne Seatbelt
 
 Discover today MadonneSeatbelt, a FiveM script, developed by MadonneStudio, allowing you to simulate the presence of a seat belt on board your vehicles. Highly configurable, this script will bring you a touch of realism to your FiveM server !
