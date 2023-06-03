@@ -24,5 +24,3 @@
 
 * [🌲 SASPR Pack](vehicles-livery/saspr-pack/README.md)
   * [How to install ?](vehicles-livery/saspr-pack/how-to-install.md)
-  * [Updates & Changelogs](vehicles-livery/saspr-pack/updates-and-changelogs.md)
-  * [Common Errors](vehicles-livery/saspr-pack/common-errors.md)
