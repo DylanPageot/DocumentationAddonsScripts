@@ -1,3 +1,8 @@
+---
+cover: ../../.gitbook/assets/Voyage Photo Général Linkedin Bannière (12).png
+coverY: 8
+---
+
 # Configuration
 
 The configuration file (named config.lua) allows you to modify all the different parameters taken into account within our script. In case of problems with the scripts, first check that you have correctly edited this document
