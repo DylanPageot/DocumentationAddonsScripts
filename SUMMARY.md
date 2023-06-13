@@ -6,6 +6,11 @@
 
 ## 💲 Paid Scripts
 
+* [⛅ Madonne Seasons](paid-scripts/madonne-seasons/README.md)
+  * [Installation](paid-scripts/madonne-seasons/installation.md)
+  * [Configuration](paid-scripts/madonne-seasons/configuration.md)
+  * [Updates & Changelogs](paid-scripts/madonne-seasons/updates-and-changelogs.md)
+  * [Common Errors](paid-scripts/madonne-seasons/common-errors.md)
 * [🔫 Wearable Weapon](paid-scripts/wearable-weapon/README.md)
   * [Installation](paid-scripts/wearable-weapon/installation.md)
   * [Configuration](paid-scripts/wearable-weapon/configuration.md)
