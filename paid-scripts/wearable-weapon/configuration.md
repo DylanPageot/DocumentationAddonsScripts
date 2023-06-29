@@ -331,4 +331,20 @@ This part is a little more complicated and allows you to specify which animation
 
 For each ped, you need to enter the model of the ped, and each accessories for each categories. If you need help to configure this part, don't hesitate to ask us on our Discord.
 
+
+
+This command will allow you to change the holster animation. You can also change all differents texts for this functionnality.
+
+````lua
+```
+    commandUsedToChangeHolsterAnim = "changeHolsterAnim", -- Accepted values : text (without the / )
+    msg_changingAnim = "Animation changed to : ",
+    msg_suggChangeAnim = "Change your default animation when you try to get a pistol from your holster.",
+    msg_AnimType = "Available animation type.",
+    msg_error = "An error has occured. Please try again."
+```
+````
+
+
+
 </details>

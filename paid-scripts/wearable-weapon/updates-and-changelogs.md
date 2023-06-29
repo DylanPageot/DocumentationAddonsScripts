@@ -6,6 +6,16 @@ To upload it, simply go to your FiveM KeyMaster area, and download again the scr
 
 <details>
 
+<summary>v1.2.2 - 06.29.2023</summary>
+
+NEW > Creation of a command to change the default holster animation\
+INFO > Increased holster animation responsiveness\
+FIX    > Resolved a new glitch possibility with weapon removal
+
+</details>
+
+<details>
+
 <summary>v1.2.1 - 05.22.2023</summary>
 
 * FIX > Compatibility issues with the vMenu disequip function
