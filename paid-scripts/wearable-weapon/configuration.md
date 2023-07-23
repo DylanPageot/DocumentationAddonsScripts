@@ -345,6 +345,51 @@ This command will allow you to change the holster animation. You can also change
 ```
 ````
 
+</details>
 
+<details>
+
+<summary>Aim animation configuration</summary>
+
+This option allows you to list the different weapons that can be influenced by the scripts. The weapons present in this list will be animated by the aiming animation system.
+
+```
+    weapon = { 
+        'WEAPON_PISTOL',
+        'WEAPON_COMBATPISTOL',
+        'WEAPON_APPISTOL',
+        'WEAPON_PISTOL50',
+        'WEAPON_SNSPISTOL',
+        'WEAPON_HEAVYPISTOL',
+        'WEAPON_PISTOLXM3',
+        'WEAPON_SNSPISTOL_MK2',
+        'WEAPON_RAYPISTOL',
+        'WEAPON_REVOLVER_MK2',
+        'WEAPON_RAYPISTOL',
+        'WEAPON_DOUBLEACTION',
+        'WEAPON_VINTAGEPISTOL',
+        'WEAPON_GADGETPISTOL',
+        'WEAPON_FLAREGUN',
+        'WEAPON_NAVYREVOLVER',
+        'WEAPON_MARKSMANPISTOL',
+        'WEAPON_REVOLVER',
+        'WEAPON_PISTOL_MK2',
+    },
+```
+
+With this option, you will can edit which animation is used to aim.
+
+```lua
+    DefaultAnim = "Default", -- Default - GangsterAS - HillbillAS
+```
+
+This command will allow you to change the aiming animation. You can also change all differents texts for this functionnality.
+
+```lua
+    commandUsedToChangeAimAnim = "changeAimAnim",
+    msg_changingAnim = "The aim animation has been changed to : ",
+    msg_suggChangeAnim = "Change your default aiming animation.",
+    msg_AnimType = "Available animation type."
+```
 
 </details>

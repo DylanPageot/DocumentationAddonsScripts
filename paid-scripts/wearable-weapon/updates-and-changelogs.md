@@ -6,6 +6,14 @@ To upload it, simply go to your FiveM KeyMaster area, and download again the scr
 
 <details>
 
+<summary>v1.3.0 - 07.24.2023</summary>
+
+NEW > Addition of the possibility to change the aim animation (with command)
+
+</details>
+
+<details>
+
 <summary>v1.2.2 - 06.29.2023</summary>
 
 NEW > Creation of a command to change the default holster animation\
