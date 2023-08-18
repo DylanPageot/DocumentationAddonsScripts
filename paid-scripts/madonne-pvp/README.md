@@ -9,3 +9,5 @@ Upon successful completion of the quiz, the player will gain access to PvP featu
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Showcase Video
+
+{% embed url="https://youtu.be/Sp6UPCP3-6M" %}
