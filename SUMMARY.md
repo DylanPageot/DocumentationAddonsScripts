@@ -34,6 +34,11 @@
   * [Configuration](free-scripts/madonne-seatbelt/configuration.md)
   * [Updates & Changelogs](free-scripts/madonne-seatbelt/updates-and-changelogs.md)
   * [Common Errors](free-scripts/madonne-seatbelt/common-errors.md)
+* [🗑 Delete Gun](free-scripts/delete-gun/README.md)
+  * [Installation](free-scripts/delete-gun/installation.md)
+  * [Configuration](free-scripts/delete-gun/configuration.md)
+  * [Updates & Changelogs](free-scripts/delete-gun/updates-and-changelogs.md)
+  * [Common Errors](free-scripts/delete-gun/common-errors.md)
 
 ## 🖌 Vehicles livery
 
