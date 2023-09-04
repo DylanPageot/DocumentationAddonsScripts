@@ -21,6 +21,11 @@
   * [Configuration](paid-scripts/madonne-pvp/configuration.md)
   * [Updates & Changelogs](paid-scripts/madonne-pvp/updates-and-changelogs.md)
   * [Common Errors](paid-scripts/madonne-pvp/common-errors.md)
+* [🚙 Madonne Car Spawner](paid-scripts/madonne-car-spawner/README.md)
+  * [Installation](paid-scripts/madonne-car-spawner/installation.md)
+  * [Configuration](paid-scripts/madonne-car-spawner/configuration.md)
+  * [Updates & Changelogs](paid-scripts/madonne-car-spawner/updates-and-changelogs.md)
+  * [Common Errors](paid-scripts/madonne-car-spawner/common-errors.md)
 
 ## 🆓 Free scripts
 
