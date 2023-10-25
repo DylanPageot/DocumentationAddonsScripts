@@ -148,6 +148,7 @@ COMMANDS = {
     ChangeWeather = "changeweather",
     ChangeTime = "changetime",
     NextWeather = "nextweather",
+    Season = "season",
 }
 
 HELPCMD = {
@@ -157,6 +158,7 @@ HELPCMD = {
     ChangeWeather = "Modify the weather for a custom one (EXTRASUNNY, CLOUDS, RAIN, THUNDER, SNOW, ...)",
     ChangeTime = "Change the current time to a custom time (in HH:MM format).",
     NextWeather = "Go to the next weather.",
+    Season = "Get the current season.",
 }
 
 -- Change any text to your own language
@@ -171,7 +173,8 @@ TEXT = {
     WeatherChangedTo = "Weather is successfully changed to : ",
     TimeChangedTo = "Time is successfully changed to : ",
     WeatherChangedError = "Weather can't be changed. Please check args in your command.",
-    TimeChangedError = "Time can't be changed. Please check args and respect this : HH:MM."
+    TimeChangedError = "Time can't be changed. Please check args and respect this : HH:MM.",
+    Season = "We are actually in ",
 }
 ```
 
@@ -344,6 +347,7 @@ COMMANDS = {
     ChangeWeather = "changeweather",
     ChangeTime = "changetime",
     NextWeather = "nextweather",
+    Season = "season",
 }
 
 HELPCMD = {
@@ -353,6 +357,7 @@ HELPCMD = {
     ChangeWeather = "Modify the weather for a custom one (EXTRASUNNY, CLOUDS, RAIN, THUNDER, SNOW, ...)",
     ChangeTime = "Change the current time to a custom time (in HH:MM format).",
     NextWeather = "Go to the next weather.",
+    Season = "Get the current season.",
 }
 
 -- Change any text to your own language
@@ -367,7 +372,8 @@ TEXT = {
     WeatherChangedTo = "Weather is successfully changed to : ",
     TimeChangedTo = "Time is successfully changed to : ",
     WeatherChangedError = "Weather can't be changed. Please check args in your command.",
-    TimeChangedError = "Time can't be changed. Please check args and respect this : HH:MM."
+    TimeChangedError = "Time can't be changed. Please check args and respect this : HH:MM.",
+    Season = "We are actually in ",
 }
 ```
 ````

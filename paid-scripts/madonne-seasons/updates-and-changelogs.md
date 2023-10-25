@@ -6,6 +6,16 @@ To upload it, simply go to your FiveM KeyMaster area, and download again the scr
 
 <details>
 
+<summary>v1.0.4 - 10.25.2023</summary>
+
+\
+MAJ > Adding a /season command to let you in which season you are on your server.\
+FIX   > The /changeTime command now actually changes the in-game time.
+
+</details>
+
+<details>
+
 <summary>v1.0.3 - 09.15.2023</summary>
 
 FIX > Improved time synchronization between different players\
