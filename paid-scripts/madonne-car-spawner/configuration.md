@@ -15,6 +15,8 @@ CONFIG = {
     Enable_Keybind_To_Open = true,
     Keybind_To_Open = 168, -- Default : F7
     
+    EjectDriverIfCantDrive = true,
+    
     Add_Blip_To_Vehicle = true,
     Blip_Sprite = 56,
     Blip_Colour = 57,
@@ -68,7 +70,8 @@ TRANSLATIONS = {
     Vehicle_Already_Coming = "Un véhicule est déjà en route. Merci de patienter qu'il arrive.",
     Shipping_In_Progress = "Livraison en cours de votre véhicule...",
     Vehicle_On_Nearest_Slot = "Votre véhicule est prêt. Il vous attend sur la place de parking la plus proche !",
-    Vehicle_Arrived = "Votre véhicule est arrivé !"
+    Vehicle_Arrived = "Votre véhicule est arrivé !",
+    CantDrive = "Vous n'avez pas accès à ce véhicule."
 }
 ```
 
@@ -91,6 +94,12 @@ Configure the different ways to open the vehicle spawn menu.
     Command_To_Open = "vehicle", -- Without '/'
     Enable_Keybind_To_Open = true,
     Keybind_To_Open = 168, -- Default : F7
+```
+
+Configure if the driver must be kicked out of the vehicle if he is not whitelisted.
+
+```lua
+EjectDriverIfCantDrive = true,
 ```
 
 Configure the display of vehicle blips on the map.
@@ -164,7 +173,8 @@ TRANSLATIONS = {
     Vehicle_Already_Coming = "Un véhicule est déjà en route. Merci de patienter qu'il arrive.",
     Shipping_In_Progress = "Livraison en cours de votre véhicule...",
     Vehicle_On_Nearest_Slot = "Votre véhicule est prêt. Il vous attend sur la place de parking la plus proche !",
-    Vehicle_Arrived = "Votre véhicule est arrivé !"
+    Vehicle_Arrived = "Votre véhicule est arrivé !",
+    CantDrive = "Vous n'avez pas accès à ce véhicule."
 }
 ```
 
@@ -206,6 +216,8 @@ This file contains all the parking spaces that have been recorded. You can chang
 
 Add here all the different vehicles you want to appear in the menu. For each vehicle, please specify: its type (civilian = 0, police = 1, fire department = 2, EMS = 3, military = 4), its category, its name, its model, if you wish to appear inside this one or not, its livery, a photo, if access is restricted and the extras which are to be activated or desactivated.
 
+The ids of differents colors can be found [here](https://wiki.rage.mp/index.php?title=Vehicle\_Colors).
+
 ```lua
     {
         type = 1,
@@ -219,6 +231,8 @@ Add here all the different vehicles you want to appear in the menu. For each veh
         permissionCode = "",
         extraToEnable = {1,4},
         extraToDisable = {2,3,5,6,7},
+        primaryColor = 0,
+        secondaryColor = 0,
     },
 ```
 
