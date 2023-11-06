@@ -13,7 +13,7 @@ CONFIG = {
     Enable_Command_To_Open = true,
     Command_To_Open = "vehicle", -- Without '/'
     Enable_Keybind_To_Open = true,
-    Keybind_To_Open = 168, -- Default : F7
+    Keybind_To_Open = 'F7', -- Default : F7
     
     EjectDriverIfCantDrive = true,
     
@@ -71,7 +71,8 @@ TRANSLATIONS = {
     Shipping_In_Progress = "Livraison en cours de votre véhicule...",
     Vehicle_On_Nearest_Slot = "Votre véhicule est prêt. Il vous attend sur la place de parking la plus proche !",
     Vehicle_Arrived = "Votre véhicule est arrivé !",
-    CantDrive = "Vous n'avez pas accès à ce véhicule."
+    CantDrive = "Vous n'avez pas accès à ce véhicule.",
+    OpenKeySettings = "Open Car Spawner"
 }
 ```
 
@@ -93,7 +94,7 @@ Configure the different ways to open the vehicle spawn menu.
     Enable_Command_To_Open = true,
     Command_To_Open = "vehicle", -- Without '/'
     Enable_Keybind_To_Open = true,
-    Keybind_To_Open = 168, -- Default : F7
+    Keybind_To_Open = 'F7', -- Default : F7
 ```
 
 Configure if the driver must be kicked out of the vehicle if he is not whitelisted.
@@ -174,7 +175,8 @@ TRANSLATIONS = {
     Shipping_In_Progress = "Livraison en cours de votre véhicule...",
     Vehicle_On_Nearest_Slot = "Votre véhicule est prêt. Il vous attend sur la place de parking la plus proche !",
     Vehicle_Arrived = "Votre véhicule est arrivé !",
-    CantDrive = "Vous n'avez pas accès à ce véhicule."
+    CantDrive = "Vous n'avez pas accès à ce véhicule.",
+    OpenKeySettings = "Open Car Spawner"
 }
 ```
 
