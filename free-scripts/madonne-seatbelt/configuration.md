@@ -50,6 +50,8 @@ CONFIG_MADONNE_SEATBELT = {
 
     -- Allows you to add and configure a sound effect simulating putting on your seat belt (or taking it off)
     EnableNotifications = true,
+    NotificationsType = "default", -- Availables values : default | custom
+    -- If NotificationsType is set to custom, you must to edit the notifs.lua file. You can ask us on Discord if you need any support about this.
     Strings = {
         seatbelt_on = 'Seatbelt : ~g~set',
         seatbelt_off = 'Seatbelt : ~r~removed',
@@ -118,10 +120,12 @@ The options below allow you to manager the sound effects when your players put o
 
 
 
-Whether or not to show a notification above the map when the belt is fastened and unfastened.
+Whether or not to show a notification above the map when the belt is fastened and unfastened. You can also choose to setup your custom notification system.
 
 ```lua
     EnableNotifications = true,
+    NotificationsType = "default", -- Availables values : default | custom
+	-- If NotificationsType is set to custom, you must to edit the notifs.lua file. You can ask us on Discord if you need any support about this.
     Strings = {
         seatbelt_on = 'Seatbelt : ~g~set',
         seatbelt_off = 'Seatbelt : ~r~removed',
