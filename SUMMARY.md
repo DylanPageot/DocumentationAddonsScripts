@@ -29,6 +29,9 @@
 
 ## 🆓 Free scripts
 
+* [🛠 Madonne Core Script](free-scripts/madonne-core-script/README.md)
+  * [Updates & Changelogs](free-scripts/madonne-core-script/updates-and-changelogs.md)
+  * [Common Errors](free-scripts/madonne-core-script/common-errors.md)
 * [🚗 Madonne Seatbelt](free-scripts/madonne-seatbelt/README.md)
   * [Installation](free-scripts/madonne-seatbelt/installation.md)
   * [Configuration](free-scripts/madonne-seatbelt/configuration.md)
