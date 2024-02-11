@@ -8,7 +8,7 @@ To upload it, simply go to your FiveM KeyMaster area, and download again the scr
 
 <summary>v1.2.0 - 02.11.2024</summary>
 
-* NEW > You now have the possibility to apply a multiplicator to the ejection velocit.
+* NEW > You now have the possibility to apply a multiplicator to the ejection velocity.
 
 </details>
 
