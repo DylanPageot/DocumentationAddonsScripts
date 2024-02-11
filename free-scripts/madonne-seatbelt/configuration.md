@@ -60,6 +60,7 @@ CONFIG_MADONNE_SEATBELT = {
     -- Sensitivity of expulsion from the vehicle in the event of impact
     DiffTrigger = 0.255,
     MinSpeed = 13.9,
+    VelocityMultiplicator = 1,
 
     -- Enables and configures the launch of a small alarm when the vehicle is moving at a certain speed without the seat belt on.
     AlarmOnlySpeed = true,
@@ -139,6 +140,7 @@ Modify via these two parameters, the sensitivity necessary to eject players who 
 ```lua
     DiffTrigger = 0.255,
     MinSpeed = 13.9,
+    VelocityMultiplicator = 1,
 ```
 
 
