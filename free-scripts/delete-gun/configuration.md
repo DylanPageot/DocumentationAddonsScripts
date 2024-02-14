@@ -23,6 +23,8 @@ The configuration file (named config.lua) allows you to modify all the different
 
 CONFIG_DELETE_GUN = {
     -- ace | custom
+    -- If you're using the ACE permissions system, you must to give by default the permission madonne.deletegun .
+    -- You can edit this permission in the customs.lua file.
     PERMISSION_SYSTEM = "ace",
     
     WEAPON_TO_USE = "WEAPON_RAYCARBINE",
@@ -45,6 +47,8 @@ Configure which permission must be used to give access to the delete gun.
 
 ```lua
 -- ace | custom
+-- If you're using the ACE permissions system, you must to give by default the permission madonne.deletegun .
+-- You can edit this permission in the customs.lua file.
 PERMISSION_SYSTEM = "ace",
 ```
 
