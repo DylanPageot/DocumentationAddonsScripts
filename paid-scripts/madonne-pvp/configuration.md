@@ -103,7 +103,7 @@ Changing notification preferences.
 In the questions.lua, you can edit each questions you want to ask to your players in the quiz. He is pretty simple to edit.
 
 ```lua
-local questionsFromCFG = {
+QuestionsFromCFG = {
     {
         question = "Un joueur roule tranquillement, en voiture civil. Je me décide de l'arrêter pour le contrôler. Ce dernier m'indique qu'il ne veut pas particier à l'action.",
         answerA = "Je comprends sa décision et repart patrouiller. ",

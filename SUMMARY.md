@@ -16,7 +16,7 @@
   * [Configuration](paid-scripts/wearable-weapon/configuration.md)
   * [Updates & Changelogs](paid-scripts/wearable-weapon/updates-and-changelogs.md)
   * [Common Errors](paid-scripts/wearable-weapon/common-errors.md)
-* [🛡 Madonne PVP](paid-scripts/madonne-pvp/README.md)
+* [🛡️ Madonne PVP](paid-scripts/madonne-pvp/README.md)
   * [Installation](paid-scripts/madonne-pvp/installation.md)
   * [Configuration](paid-scripts/madonne-pvp/configuration.md)
   * [Updates & Changelogs](paid-scripts/madonne-pvp/updates-and-changelogs.md)
@@ -34,13 +34,13 @@
   * [Configuration](free-scripts/madonne-seatbelt/configuration.md)
   * [Updates & Changelogs](free-scripts/madonne-seatbelt/updates-and-changelogs.md)
   * [Common Errors](free-scripts/madonne-seatbelt/common-errors.md)
-* [🗑 Delete Gun](free-scripts/delete-gun/README.md)
+* [🗑️ Delete Gun](free-scripts/delete-gun/README.md)
   * [Installation](free-scripts/delete-gun/installation.md)
   * [Configuration](free-scripts/delete-gun/configuration.md)
   * [Updates & Changelogs](free-scripts/delete-gun/updates-and-changelogs.md)
   * [Common Errors](free-scripts/delete-gun/common-errors.md)
 
-## 🖌 Vehicles livery
+## 🖌️ Vehicles livery
 
 * [🌲 SASPR Pack](vehicles-livery/saspr-pack/README.md)
   * [How to install ?](vehicles-livery/saspr-pack/how-to-install.md)

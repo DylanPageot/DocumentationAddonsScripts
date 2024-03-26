@@ -21,6 +21,5 @@
 set mysql_connection_string "server=XXX;port=XXX;userid=XXX;password=XXX;database=XXX"
 ```
 
-8. Go to your database and import the db.sql file.
-9. Start your server and enjoy your new script !
+8. Start your server and enjoy your new script !
 
