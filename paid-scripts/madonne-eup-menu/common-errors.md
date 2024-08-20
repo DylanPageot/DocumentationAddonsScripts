@@ -2,9 +2,9 @@
 
 <details>
 
-<summary>You lack the required entitlement to use MS_Madonne_CarSpawner</summary>
+<summary>You lack the required entitlement to use MS_Madonne_EUPMenu</summary>
 
-This message indicates that you do not have permission to launch the Madonne Car Spawner resource.
+This message indicates that you do not have permission to launch the Madonne EUP Menu resource.
 
 The causes can be multiple. We therefore advise you to check these different points :&#x20;
 

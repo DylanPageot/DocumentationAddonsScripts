@@ -22,6 +22,10 @@
   * [Installation](paid-scripts/madonne-car-spawner/installation.md)
   * [Configuration](paid-scripts/madonne-car-spawner/configuration.md)
   * [Common Errors](paid-scripts/madonne-car-spawner/common-errors.md)
+* [👕 Madonne EUP Menu](paid-scripts/madonne-eup-menu/README.md)
+  * [Installation](paid-scripts/madonne-eup-menu/installation.md)
+  * [Configuration](paid-scripts/madonne-eup-menu/configuration.md)
+  * [Common Errors](paid-scripts/madonne-eup-menu/common-errors.md)
 
 ## 🆓 Free scripts
 
