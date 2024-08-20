@@ -6,6 +6,8 @@ It is often complicated for servers not using ESX, QB Core or any other similar 
 
 Our script allows you to allow your players to choose their vehicles via an intuitive interface and to have their vehicles appear near them, in one of the 11,000 parking spaces present in the game (having been listed by us). If no parking space is available nearby, an NPC will be responsible for bringing the vehicle to your players.
 
+This dashboard is now also available from a NPC or through a marker, in a specific zone.
+
 <figure><img src="../../.gitbook/assets/vlcsnap-2023-09-04-10h36m51s851.png" alt=""><figcaption></figcaption></figure>
 
 ### Showcase Video

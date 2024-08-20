@@ -12,20 +12,6 @@ The configuration file (named config.lua) allows you to modify all the different
 <summary><em><strong>Content of the configuration file by default</strong></em></summary>
 
 ```lua
-----------------------------------------------------------------------------------------------------
---                           Madonne Studio © 2023 - All rights reserved                          --
---                                                                                                --
---                                    "MADONNE SEASONS - v.1.0.0"                                 --
---                                                                                                --
---               For any issue with this ressource, please contact us on Discord :                --
---                                                                                                --
---                                  https://discord.gg/nmBAJrFhQB                                 --
---                                                                                                --
---                                    https://madonnestudio.com                                   --
---                                    contact@madonnestudio.com                                   --
---                                                                                                --
-----------------------------------------------------------------------------------------------------
-
 CONFIG_MADONNE_SEASONS = {
 
     -- Select type of permission system used

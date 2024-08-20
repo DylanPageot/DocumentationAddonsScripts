@@ -7,20 +7,6 @@
 <summary><em><strong>Content of the configuration file by default</strong></em></summary>
 
 ```lua
-----------------------------------------------------------------------------------------------------
---                           Madonne Studio © 2023 - All rights reserved                          --
---                                                                                                --
---                                    "MADONNE PVP - v.1.0.0"                                --
---                                                                                                --
---               For any issue with this ressource, please contact us on Discord :                --
---                                                                                                --
---                                  https://discord.gg/nmBAJrFhQB                                 --
---                                                                                                --
---                                    https://madonnestudio.com                                   --
---                                    contact@madonnestudio.com                                   --
---                                                                                                --
-----------------------------------------------------------------------------------------------------
-
 CONFIG_MADONNE_PVP = {
 
     -- Amount of time a player must wait if they fail all three tries. In days.
@@ -55,7 +41,7 @@ CONFIG_MADONNE_PVP = {
 Number of days required for the test counter to reset.
 
 ```lua
-    ResetOfTestsEvery = 1,
+ResetOfTestsEvery = 1,
 ```
 
 
@@ -63,7 +49,7 @@ Number of days required for the test counter to reset.
 Default state of passive mode.
 
 ```lua
-    PeacetimeStateByDefault = false,
+PeacetimeStateByDefault = false,
 ```
 
 
@@ -71,15 +57,15 @@ Default state of passive mode.
 Translations of the various phrases used in the script.
 
 ```lua
-    PeacetimeEnabled = "ATTENTION : Le mode passif a été activé. Vous êtes donc à l'abri de tous dégâts.",
-    PeacetimeDisabled = "ATTENTION : Le mode passif a été désactivé. Retour à la normale de la situation.",
-    QuizUiIsLoading = "Chargement de l'interface d'accès au PVP...",
-    AlreadyHavePvp = "Vous disposez déjà des accès PVP.",
+PeacetimeEnabled = "ATTENTION : Le mode passif a été activé. Vous êtes donc à l'abri de tous dégâts.",
+PeacetimeDisabled = "ATTENTION : Le mode passif a été désactivé. Retour à la normale de la situation.",
+QuizUiIsLoading = "Chargement de l'interface d'accès au PVP...",
+AlreadyHavePvp = "Vous disposez déjà des accès PVP.",
     
-    NoTryRemaining = "Il ne t'en reste plus.",
-    OneTryRemaining = "Il t'en reste 1.",
-    TwoTryRemaining = "Il t'en reste 2.",
-    ThreeTryRemaining = "Il t'en reste 3.",
+NoTryRemaining = "Il ne t'en reste plus.",
+OneTryRemaining = "Il t'en reste 1.",
+TwoTryRemaining = "Il t'en reste 2.",
+ThreeTryRemaining = "Il t'en reste 3.",
 ```
 
 
@@ -87,9 +73,9 @@ Translations of the various phrases used in the script.
 Changing notification preferences.
 
 ```lua
-    NOTIFICATION_TYPE = "notification",
-    notifChatColor = {255,255,255},
-    globalPrefixBis = "MadonneStudio",
+NOTIFICATION_TYPE = "notification",
+notifChatColor = {255,255,255},
+globalPrefixBis = "MadonneStudio",
 ```
 
 

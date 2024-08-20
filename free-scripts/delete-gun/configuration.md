@@ -7,24 +7,13 @@ The configuration file (named config.lua) allows you to modify all the different
 <summary><em><strong>Content of the configuration file by default</strong></em></summary>
 
 ```lua
-----------------------------------------------------------------------------------------------------
---                           Madonne Studio © 2023 - All rights reserved                          --
---                                                                                                --
---                                       "DELETE GUN - v.1.0.0"                                   --
---                                                                                                --
---               For any issue with this ressource, please contact us on Discord :                --
---                                                                                                --
---                                  https://discord.gg/nmBAJrFhQB                                 --
---                                                                                                --
---                                    https://madonnestudio.com                                   --
---                                    contact@madonnestudio.com                                   --
---                                                                                                --
-----------------------------------------------------------------------------------------------------
-
 CONFIG_DELETE_GUN = {
     -- ace | custom
     -- If you're using the ACE permissions system, you must to give by default the permission madonne.deletegun .
     -- You can edit this permission in the customs.lua file.
+    FRAMEWORK = "esx", -- esx | none
+    INVENTORY = "ox", -- ox | none <- ONLY IF FRAMEWORK IS NOT NONE
+
     PERMISSION_SYSTEM = "ace",
     
     WEAPON_TO_USE = "WEAPON_RAYCARBINE",
@@ -42,6 +31,13 @@ CONFIG_DELETE_GUN = {
 <details>
 
 <summary><em>Main Delete Gun Configuration</em></summary>
+
+Select if you use ESX and potentially OX Inventory or not.
+
+```lua
+FRAMEWORK = "esx", -- esx | none
+INVENTORY = "ox", -- ox | none <- ONLY IF FRAMEWORK IS NOT NONE
+```
 
 Configure which permission must be used to give access to the delete gun.
 
@@ -65,10 +61,10 @@ Select which weapon must be used as Delete Gun, and if you want this wepaon to b
 Whether or not to show a notification above the map when an entity is deleted with the delete gun.
 
 ```lua
-    NOTIFICATION_TEXT = "Entity deleted !",
-    -- notification | chat | other
-    NOTIFICATION_TYPE = "notification",
-    notifChatColor = {255,255,255},
+NOTIFICATION_TEXT = "Entity deleted !",
+-- notification | chat | other
+NOTIFICATION_TYPE = "notification",
+notifChatColor = {255,255,255},
 ```
 
 </details>

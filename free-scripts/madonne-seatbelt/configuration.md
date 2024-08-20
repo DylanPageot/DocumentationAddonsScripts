@@ -12,20 +12,6 @@ The configuration file (named config.lua) allows you to modify all the different
 <summary><em><strong>Content of the configuration file by default</strong></em></summary>
 
 ```lua
-----------------------------------------------------------------------------------------------------
---                           Madonne Studio © 2023 - All rights reserved                          --
---                                                                                                --
---                                    "MADONNE SEATBELT - v.1.0.1"                                --
---                                                                                                --
---               For any issue with this ressource, please contact us on Discord :                --
---                                                                                                --
---                                  https://discord.gg/nmBAJrFhQB                                 --
---                                                                                                --
---                                    https://madonnestudio.com                                   --
---                                    contact@madonnestudio.com                                   --
---                                                                                                --
-----------------------------------------------------------------------------------------------------
-
 CONFIG_MADONNE_SEATBELT = {
     -- If you want to disable the seat belts for a particular vehicle, you can enter the model of that vehicle below
     DisableSeatbeltsForThisVehicles = {
@@ -39,6 +25,7 @@ CONFIG_MADONNE_SEATBELT = {
 
     -- Change the key associated with the seat belt (default: K). To obtain the code corresponding to the key of your choice, refer to the following site: https://docs.fivem.net/docs/game-references/controls/
     SeatbeltKey = 311,
+    EnableWhenDead = false,
 
     -- Activate / Deactivate the display of a warning light when the belt is not fastened.
     ShowBlinker = true,
@@ -58,9 +45,10 @@ CONFIG_MADONNE_SEATBELT = {
     },
 
     -- Sensitivity of expulsion from the vehicle in the event of impact
-    DiffTrigger = 0.255,
+    DiffTrigger = 0.325,
     MinSpeed = 13.9,
     VelocityMultiplicator = 1,
+    DisableEjectionWhenBreaking = true,
 
     -- Enables and configures the launch of a small alarm when the vehicle is moving at a certain speed without the seat belt on.
     AlarmOnlySpeed = true,
@@ -99,6 +87,7 @@ Change the key associated with the seat belt (default : K). To botain the code c
 
 ```lua
 SeatbeltKey = 311,
+EnableWhenDead = false,
 ```
 
 
@@ -114,9 +103,9 @@ ShowBlinker = true,
 The options below allow you to manager the sound effects when your players put on and take off their seatbelts.
 
 ```lua
-    ActivateSound = true,
-    LoopSound = true,
-    Volume = 0.8,
+ActivateSound = true,
+LoopSound = true,
+Volume = 0.8,
 ```
 
 
@@ -124,13 +113,13 @@ The options below allow you to manager the sound effects when your players put o
 Whether or not to show a notification above the map when the belt is fastened and unfastened. You can also choose to setup your custom notification system.
 
 ```lua
-    EnableNotifications = true,
-    NotificationsType = "default", -- Availables values : default | custom
-	-- If NotificationsType is set to custom, you must to edit the notifs.lua file. You can ask us on Discord if you need any support about this.
-    Strings = {
+EnableNotifications = true,
+NotificationsType = "default", -- Availables values : default | custom
+-- If NotificationsType is set to custom, you must to edit the notifs.lua file. You can ask us on Discord if you need any support about this.
+Strings = {
         seatbelt_on = 'Seatbelt : ~g~set',
         seatbelt_off = 'Seatbelt : ~r~removed',
-    },
+},
 ```
 
 
@@ -138,9 +127,10 @@ Whether or not to show a notification above the map when the belt is fastened an
 Modify via these two parameters, the sensitivity necessary to eject players who do not have seat belts attached, in the event of an accident.
 
 ```lua
-    DiffTrigger = 0.255,
-    MinSpeed = 13.9,
-    VelocityMultiplicator = 1,
+DiffTrigger = 0.255,
+MinSpeed = 13.9,
+VelocityMultiplicator = 1,
+DisableEjectionWhenBreaking = true,
 ```
 
 
@@ -148,9 +138,9 @@ Modify via these two parameters, the sensitivity necessary to eject players who 
 Allows you to activate and configure the presence of an audible alarm when the seat belt is not fastened and the vehicle is moving.
 
 ```lua
-    AlarmOnlySpeed = true,
-    AlarmSpeed = 20,
-    AlarmVolume = 0.2
+AlarmOnlySpeed = true,
+AlarmSpeed = 20,
+AlarmVolume = 0.2
 ```
 
 </details>
