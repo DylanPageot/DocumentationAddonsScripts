@@ -64,6 +64,9 @@ CONFIG_WEARABLE_WEAPONS = {
     -- This option determines whether the weapon should be worn on the chest or on the back by default.
     default_position = 2, -- Accepted values : 1 (Chest) | 2 (Back)
 
+    bags_can_contain_weapons = true,
+    bags_eup = {41,45}
+
     -- Select whether or not the player can choose himself between placing his weapon on his back and placing his weapon on the chest. (Command to use : /weaponposition)
     playerCanChangePosition = true, -- Accepted values : false | true
 
@@ -278,7 +281,12 @@ attachedBones = { --
 default_position = 2,
 ```
 
+Select if you want to let the possibility to your players to get weapons from bag, and if yes, in which bags
 
+```
+bags_can_contain_weapons = true,
+bags_eup = {41,45}
+```
 
 Select whether or not the player can choose himself between placing his weapon on his back and placing his weapon on the chest. (Command by default : /weaponposition)
 
