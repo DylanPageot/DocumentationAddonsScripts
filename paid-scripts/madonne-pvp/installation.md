@@ -7,7 +7,7 @@
 
 3. In the list of resources, select the Download button corresponding to MadonnePVP. This will download you a .zip file.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 4. Open the archive you just downloaded. There you will find two folders named **MS\_Madonne\_PVP** and **oxmysql**.
 5. Drag this folders into your server's resources folder.
