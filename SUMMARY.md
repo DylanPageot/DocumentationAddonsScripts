@@ -62,6 +62,9 @@
 
 ## 🆓 Free scripts
 
+* [📢 Madonne Notify](free-scripts/madonne-notify/README.md)
+  * [Installation](free-scripts/madonne-notify/installation.md)
+  * [Common Errors](free-scripts/madonne-notify/common-errors.md)
 * [🚗 Madonne Seatbelt](free-scripts/madonne-seatbelt/README.md)
   * [Installation](free-scripts/madonne-seatbelt/installation.md)
   * [Configuration](free-scripts/madonne-seatbelt/configuration.md)
