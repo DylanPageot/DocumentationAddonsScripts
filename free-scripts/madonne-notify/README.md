@@ -26,7 +26,7 @@ To send a notification from the server to a specific player:
 
 ```lua
 -- Parameters: targetPlayer, type, title, message, duration, sound
-exports['madonne_notify']:Notify(targetPlayer, "success", "Mission Complete", "You earned $500!", 5000, true)
+exports['MS_Madonne_Notify']:Notify(targetPlayer, "success", "Mission Complete", "You earned $500!", 5000, true)
 ```
 
 #### 💻 Client-Side Usage
@@ -35,7 +35,7 @@ To display a notification locally on the client:
 
 ```lua
 -- Parameters: type, title, message, duration, sound
-exports['madonne_notify']:Notify("error", "Access Denied", "You do not have permission to do this.", 4000, true)
+exports['MS_Madonne_Notify']:Notify("error", "Access Denied", "You do not have permission to do this.", 4000, true)
 ```
 
 **🎨 Notification Types & Styles**
