@@ -39,14 +39,6 @@ Welcome to the complete documentation for **Madonne DOJ**, a comprehensive judic
 
 ***
 
-## What is MadonneStudio?
-
-MadonneStudio is an independent development studio. From simple game server creation to full video game production, each MadonneStudio project seeks to combine realism, interactivity, and immersion. Originally created in 2020, MadonneStudio started working on its first video games in 2021.
-
-We specialize in creating high-quality resources for FiveM servers, with a focus on law enforcement and judicial systems.
-
-***
-
 **Madonne DOJ v1.0.0**
 
 _Developed by M\_g for MadonneStudio © 2025 - All rights reserved_
