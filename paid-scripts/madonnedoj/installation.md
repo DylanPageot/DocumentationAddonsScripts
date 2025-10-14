@@ -22,11 +22,11 @@ Follow these steps to install Madonne DOJ on your server:
 
 ### Step 1: Download the Resource
 
-Download the `mg-dojscript` resource and place it in your server's `resources` folder.
+Download the `MS_MaodonneDOJ` resource and place it in your server's `resources` folder.
 
 ```
 resources/
-  └── mg-dojscript/
+  └── MS_MaodonneDOJ/
 ```
 
 ### Step 2: Import the Database
@@ -74,7 +74,7 @@ For detailed configuration options, see the [Configuration Guide](configuration/
 Add the resource to your `server.cfg` file:
 
 ```cfg
-ensure mg-dojscript
+ensure MS_MaodonneDOJ
 ```
 
 Make sure it's placed **after** your framework (ESX/QBCore) in the load order.
@@ -83,7 +83,7 @@ Make sure it's placed **after** your framework (ESX/QBCore) in the load order.
 ```cfg
 ensure es_extended
 ensure oxmysql
-ensure mg-dojscript
+ensure MS_MaodonneDOJ
 ```
 
 ### Step 5: Restart Your Server
@@ -91,7 +91,7 @@ ensure mg-dojscript
 Restart your FiveM server to load the resource:
 
 ```bash
-restart mg-dojscript
+restart MS_MaodonneDOJ
 ```
 
 Or restart the entire server if you prefer.

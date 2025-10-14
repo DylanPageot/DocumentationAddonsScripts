@@ -229,7 +229,7 @@ CONFIG_MADONNE_DOJ = {
 
 1. **Restart the script:**
    ```
-   restart mg-dojscript
+   restart MS_MaodonneDOJ
    ```
 
 2. **Open the tablet:**

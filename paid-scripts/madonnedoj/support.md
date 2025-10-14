@@ -65,7 +65,7 @@ CONFIG_MADONNE_DOJ = {
 
 Then restart the script:
 ```
-restart mg-dojscript
+restart MS_MaodonneDOJ
 ```
 
 ### 3. Check Server Console
