@@ -10,19 +10,10 @@ This guide will walk you through adding a new language translation to Madonne DO
 ## Overview
 
 Adding a new language involves:
+
 1. Creating translation files
 2. Translating all text strings
 3. Configuring the script to use your language
-
-**Estimated time:** 1-2 hours (depending on your familiarity with the interface)
-
-## Prerequisites
-
-Before you begin:
-- ✅ Familiarity with JSON file format
-- ✅ Access to the script files
-- ✅ A text editor (VS Code, Notepad++, etc.)
-- ✅ Optional: Knowledge of the interface to understand context
 
 ## Step-by-Step Guide
 
@@ -30,16 +21,16 @@ Before you begin:
 
 Use the standard ISO 639-1 two-letter language code:
 
-| Language | Code |
-|----------|------|
-| Spanish | `es` |
-| German | `de` |
-| Italian | `it` |
+| Language   | Code |
+| ---------- | ---- |
+| Spanish    | `es` |
+| German     | `de` |
+| Italian    | `it` |
 | Portuguese | `pt` |
-| Dutch | `nl` |
-| Polish | `pl` |
-| Russian | `ru` |
-| Turkish | `tr` |
+| Dutch      | `nl` |
+| Polish     | `pl` |
+| Russian    | `ru` |
+| Turkish    | `tr` |
 
 For this example, we'll add **Spanish** (`es`).
 
@@ -68,6 +59,7 @@ Open your new `es.json` file and translate **only the values**, not the keys.
 #### Translation Example
 
 **Before (English):**
+
 ```json
 {
   "COMPONENTS": {
@@ -81,6 +73,7 @@ Open your new `es.json` file and translate **only the values**, not the keys.
 ```
 
 **After (Spanish):**
+
 ```json
 {
   "COMPONENTS": {
@@ -102,6 +95,7 @@ Open your new `es.json` file and translate **only the values**, not the keys.
 Here's a complete translation structure for reference:
 
 <details>
+
 <summary><strong>Complete JSON Structure (click to expand)</strong></summary>
 
 ```json
@@ -201,13 +195,14 @@ Here's a complete translation structure for reference:
 
 The `DATE_FORMAT` key controls how dates are displayed. Use the format that's common in your region:
 
-| Region | Format | Example |
-|--------|--------|---------|
+| Region | Format       | Example    |
+| ------ | ------------ | ---------- |
 | Europe | `dd/MM/yyyy` | 25/12/2024 |
-| USA | `MM/dd/yyyy` | 12/25/2024 |
-| ISO | `yyyy-MM-dd` | 2024-12-25 |
+| USA    | `MM/dd/yyyy` | 12/25/2024 |
+| ISO    | `yyyy-MM-dd` | 2024-12-25 |
 
 **Spanish example:**
+
 ```json
 {
   "DATE_FORMAT": "dd/MM/yyyy"
@@ -227,83 +222,52 @@ CONFIG_MADONNE_DOJ = {
 
 ### Step 7: Test Your Translation
 
-1. **Restart the script:**
-   ```
-   restart mg-dojscript
-   ```
+1.  **Restart the script:**
 
-2. **Open the tablet:**
-   ```
-   /tablet
-   ```
+    ```
+    restart mg-dojscript
+    ```
+2.  **Open the tablet:**
 
+    ```
+    /tablet
+    ```
 3. **Check all sections:**
-   - Dashboard
-   - Investigations
-   - Documents
-   - Warrants
-   - Examinations
-   - Records
-   - Violations
-   - Services
-
+   * Dashboard
+   * Investigations
+   * Documents
+   * Warrants
+   * Examinations
+   * Records
+   * Violations
+   * Services
 4. **Look for:**
-   - Missing translations (English text appearing)
-   - Truncated text (too long for buttons)
-   - Special characters not displaying correctly
-   - Context issues (wrong meaning)
-
-## Advanced: Adding Date Locale Support
-
-For proper date formatting with month names, you may need to add date-fns locale support.
-
-### Step 8: Add Date-fns Locale (Optional)
-
-If you're building from source, edit `/vue/src/utils/functions.js`:
-
-```javascript
-import { fr, enUS, es } from 'date-fns/locale'
-
-export const getFormatedDate = (timestamp) => {
-  const locales = {
-    fr,
-    en: enUS,
-    es // Add your locale here
-  };
-  // ... rest of function
-}
-```
-
-Then rebuild the Vue project:
-```bash
-cd vue
-npm run build
-```
-
-{% hint style="warning" %}
-**Note:** This step requires Node.js and npm installed. Skip if you're not building from source.
-{% endhint %}
+   * Missing translations (English text appearing)
+   * Truncated text (too long for buttons)
+   * Special characters not displaying correctly
+   * Context issues (wrong meaning)
 
 ## Translation Checklist
 
 Use this checklist to ensure complete translation:
 
-- [ ] All `COMPONENTS.*` sections translated
-- [ ] All `GENERIC.*` actions translated
-- [ ] `DATE_FORMAT` set appropriately
-- [ ] Special characters display correctly
-- [ ] Text fits in UI elements (not truncated)
-- [ ] Context is correct (meanings are accurate)
-- [ ] Empty state messages translated
-- [ ] Error messages translated
-- [ ] Tested all interface sections
-- [ ] Config.lua updated with language code
+* [ ] All `COMPONENTS.*` sections translated
+* [ ] All `GENERIC.*` actions translated
+* [ ] `DATE_FORMAT` set appropriately
+* [ ] Special characters display correctly
+* [ ] Text fits in UI elements (not truncated)
+* [ ] Context is correct (meanings are accurate)
+* [ ] Empty state messages translated
+* [ ] Error messages translated
+* [ ] Tested all interface sections
+* [ ] Config.lua updated with language code
 
 ## Common Translation Keys
 
 Here are the most important keys to translate:
 
 ### User Actions
+
 ```json
 {
   "GENERIC": {
@@ -318,6 +282,7 @@ Here are the most important keys to translate:
 ```
 
 ### Section Names
+
 ```json
 {
   "COMPONENTS": {
@@ -334,6 +299,7 @@ Here are the most important keys to translate:
 ```
 
 ### Empty States
+
 ```json
 {
   "COMPONENTS": {
@@ -350,25 +316,27 @@ Here are the most important keys to translate:
 
 Some words have different meanings in different contexts. View the interface to understand:
 
-- Is "Record" a verb (to record) or noun (a record)?
-- Is "File" a document or an action (to file)?
-- Is "Warrant" singular or can it be plural?
+* Is "Record" a verb (to record) or noun (a record)?
+* Is "File" a document or an action (to file)?
+* Is "Warrant" singular or can it be plural?
 
 ### Keep It Concise
 
 UI translations should be:
-- ✅ Short and clear
-- ✅ Easy to understand
-- ✅ Consistent in terminology
-- ❌ Not overly formal (unless appropriate)
-- ❌ Not too long for buttons
+
+* ✅ Short and clear
+* ✅ Easy to understand
+* ✅ Consistent in terminology
+* ❌ Not overly formal (unless appropriate)
+* ❌ Not too long for buttons
 
 ### Test on Different Screen Sizes
 
 Some languages are more verbose than others:
-- German translations are typically 30% longer than English
-- Spanish translations are typically 20-25% longer
-- Make sure text doesn't overflow on smaller screens
+
+* German translations are typically 30% longer than English
+* Spanish translations are typically 20-25% longer
+* Make sure text doesn't overflow on smaller screens
 
 ## Sharing Your Translation
 
@@ -383,29 +351,29 @@ If you've created a translation for a new language:
 
 ### Text appears in English instead of my language
 
-- ✅ Check the file name matches your `LocaleUi` setting
-- ✅ Verify the JSON syntax is valid (no missing commas, brackets)
-- ✅ Ensure the file is in the correct folder (`/ui/locales/`)
-- ✅ Restart the script
+* ✅ Check the file name matches your `LocaleUi` setting
+* ✅ Verify the JSON syntax is valid (no missing commas, brackets)
+* ✅ Ensure the file is in the correct folder (`/ui/locales/`)
+* ✅ Restart the script
 
 ### Special characters don't display correctly
 
-- ✅ Save the file with UTF-8 encoding
-- ✅ Don't use HTML entities (use actual characters)
-- ✅ Test with various special characters (é, ñ, ü, etc.)
+* ✅ Save the file with UTF-8 encoding
+* ✅ Don't use HTML entities (use actual characters)
+* ✅ Test with various special characters (é, ñ, ü, etc.)
 
 ### JSON syntax errors
 
-- ✅ Use a JSON validator (like jsonlint.com)
-- ✅ Check for missing commas between items
-- ✅ Ensure all quotes are properly closed
-- ✅ Watch for trailing commas (not allowed in JSON)
+* ✅ Use a JSON validator (like jsonlint.com)
+* ✅ Check for missing commas between items
+* ✅ Ensure all quotes are properly closed
+* ✅ Watch for trailing commas (not allowed in JSON)
 
 ### Text is cut off in the UI
 
-- ✅ Shorten the translation
-- ✅ Use abbreviations where appropriate
-- ✅ Check on different screen resolutions
+* ✅ Shorten the translation
+* ✅ Use abbreviations where appropriate
+* ✅ Check on different screen resolutions
 
 ## Example: Complete Spanish Translation
 
@@ -445,10 +413,10 @@ Here's a real working example for Spanish:
 
 After adding your language:
 
-* [Configuration](../configuration/README.md) - Set up your server
+* [Configuration](./) - Set up your server
 * [Usage Guide](../usage.md) - Learn the interface
 * [Support](../support.md) - Get help if needed
 
----
+***
 
 Created a translation? Share it with the community on our [Discord](https://discord.gg/madonne)!

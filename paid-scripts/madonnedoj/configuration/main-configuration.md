@@ -17,11 +17,12 @@ OpenTabletCmd = "tablet"
 
 This is the command players will use to open the tablet interface.
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
+| Property        | Type     | Default    | Description                              |
+| --------------- | -------- | ---------- | ---------------------------------------- |
 | `OpenTabletCmd` | `string` | `"tablet"` | Command to open the tablet (without `/`) |
 
 **Example:**
+
 ```lua
 OpenTabletCmd = "doj" -- Players will use /doj
 ```
@@ -34,8 +35,8 @@ DebugMode = true
 
 Enable or disable debug information in the console.
 
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
+| Property    | Type      | Default | Description                          |
+| ----------- | --------- | ------- | ------------------------------------ |
 | `DebugMode` | `boolean` | `false` | Display debug information in console |
 
 {% hint style="warning" %}
@@ -43,10 +44,11 @@ Enable or disable debug information in the console.
 {% endhint %}
 
 **When to use Debug Mode:**
-- ✅ During initial setup
-- ✅ When troubleshooting issues
-- ✅ When testing new configurations
-- ❌ In production (regular use)
+
+* ✅ During initial setup
+* ✅ When troubleshooting issues
+* ✅ When testing new configurations
+* ❌ In production (regular use)
 
 ### User Interface Language
 
@@ -56,14 +58,15 @@ LocaleUi = "fr"
 
 Set the default language for the user interface.
 
-| Property | Type | Default | Options | Description |
-|----------|------|---------|---------|-------------|
-| `LocaleUi` | `string` | `"fr"` | `"fr"`, `"en"`, or custom | UI language (must match a file in `/ui/locales/`) |
+| Property   | Type     | Default | Options                   | Description                                       |
+| ---------- | -------- | ------- | ------------------------- | ------------------------------------------------- |
+| `LocaleUi` | `string` | `"fr"`  | `"fr"`, `"en"`, or custom | UI language (must match a file in `/ui/locales/`) |
 
 **Available languages:**
-- 🇫🇷 `"fr"` - French
-- 🇬🇧 `"en"` - English
-- 🌍 Custom - [Add your own language](../internationalization/adding-a-new-language.md)
+
+* 🇫🇷 `"fr"` - French
+* 🇬🇧 `"en"` - English
+* 🌍 Custom - [Add your own language](adding-a-new-language.md)
 
 ## Text Messages
 
@@ -75,8 +78,8 @@ Strings = {
 }
 ```
 
-| Key | Default Value | Description |
-|-----|---------------|-------------|
+| Key             | Default Value                           | Description                                                              |
+| --------------- | --------------------------------------- | ------------------------------------------------------------------------ |
 | `no_permission` | `"You are not authorized to use this."` | Message shown when a player tries to access something without permission |
 
 You can add more custom messages here and reference them throughout your script.
@@ -91,8 +94,8 @@ Webhooks = {
 }
 ```
 
-| Property | Type | Description |
-|----------|------|-------------|
+| Property      | Type     | Description                                   |
+| ------------- | -------- | --------------------------------------------- |
 | `WarrantView` | `string` | Discord webhook URL for warrant notifications |
 
 **How to get a Discord webhook:**
@@ -104,9 +107,10 @@ Webhooks = {
 5. Paste it in the configuration
 
 **What gets sent:**
-- Warrant creation notifications
-- Warrant issuance alerts
-- Warrant details (suspect, type, issuing officer)
+
+* Warrant creation notifications
+* Warrant issuance alerts
+* Warrant details (suspect, type, issuing officer)
 
 {% hint style="info" %}
 **Optional:** You can leave the webhook empty if you don't want Discord notifications.
@@ -147,6 +151,6 @@ Now that you've configured the main settings, continue with:
 * [Services Configuration](services-configuration.md) - Set up your police and justice departments
 * [Permissions System](permissions-system.md) - Configure who can do what
 
----
+***
 
 Need help? Visit our [Support page](../support.md).

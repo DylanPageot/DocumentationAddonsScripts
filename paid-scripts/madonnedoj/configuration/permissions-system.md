@@ -13,9 +13,9 @@ Bitmasks are a programming technique where each permission is represented by a s
 
 ### Why Use Bitmasks?
 
-✅ **Efficient** - Store multiple permissions in one number  
-✅ **Fast** - Quick permission checks using bitwise operations  
-✅ **Flexible** - Easy to add or remove specific permissions  
+✅ **Efficient** - Store multiple permissions in one number\
+✅ **Fast** - Quick permission checks using bitwise operations\
+✅ **Flexible** - Easy to add or remove specific permissions\
 ✅ **Compact** - Saves database space
 
 ## Available Permissions
@@ -23,7 +23,7 @@ Bitmasks are a programming technique where each permission is represented by a s
 Here are all available permissions in Madonne DOJ:
 
 ```javascript
-export const PERMISSIONS = {
+const PERMISSIONS = {
   MANAGE_FOLDERS: 1 << 0,      // = 1    (Bit 0)
   MANAGE_DOCUMENTS: 1 << 1,    // = 2    (Bit 1)
   MANAGE_WARRANTS: 1 << 2,     // = 4    (Bit 2)
@@ -38,17 +38,17 @@ export const PERMISSIONS = {
 
 ### Permission Details
 
-| Permission | Value | Bit | Description |
-|------------|-------|-----|-------------|
-| `MANAGE_FOLDERS` | 1 | 0 | Create and manage investigation folders |
-| `MANAGE_DOCUMENTS` | 2 | 1 | Create and modify documents |
-| `MANAGE_WARRANTS` | 4 | 2 | Create and modify warrants |
-| `ISSUE_WARRANTS` | 8 | 3 | Issue/sign warrants (reserved for justice) |
-| `MANAGE_EXAMINATIONS` | 16 | 4 | Manage examinations/interrogations |
-| `MANAGE_REQUESTS` | 32 | 5 | Manage requests |
-| `MANAGE_RECORDS` | 64 | 6 | Manage criminal records |
-| `MANAGE_SERVICES` | 128 | 7 | Manage services and staff |
-| `MANAGE_VIOLATIONS` | 256 | 8 | Manage violations catalog |
+| Permission            | Value | Bit | Description                                |
+| --------------------- | ----- | --- | ------------------------------------------ |
+| `MANAGE_FOLDERS`      | 1     | 0   | Create and manage investigation folders    |
+| `MANAGE_DOCUMENTS`    | 2     | 1   | Create and modify documents                |
+| `MANAGE_WARRANTS`     | 4     | 2   | Create and modify warrants                 |
+| `ISSUE_WARRANTS`      | 8     | 3   | Issue/sign warrants (reserved for justice) |
+| `MANAGE_EXAMINATIONS` | 16    | 4   | Manage examinations/interrogations         |
+| `MANAGE_REQUESTS`     | 32    | 5   | Manage requests                            |
+| `MANAGE_RECORDS`      | 64    | 6   | Manage criminal records                    |
+| `MANAGE_SERVICES`     | 128   | 7   | Manage services and staff                  |
+| `MANAGE_VIOLATIONS`   | 256   | 8   | Manage violations catalog                  |
 
 {% hint style="warning" %}
 **Reserved Permission:** `ISSUE_WARRANTS` (8) should only be given to justice services. Police can create warrants, but only judges can issue/sign them.
@@ -65,16 +65,19 @@ This is the easiest method - just add the numbers!
 #### Example 1: Basic Officer
 
 **Desired Permissions:**
-- Create folders (1)
-- Create documents (2)
-- Conduct examinations (16)
+
+* Create folders (1)
+* Create documents (2)
+* Conduct examinations (16)
 
 **Calculation:**
+
 ```
 1 + 2 + 16 = 19
 ```
 
 **Configuration:**
+
 ```lua
 permissions = {
   user = 19,
@@ -84,16 +87,19 @@ permissions = {
 #### Example 2: Detective
 
 **Desired Permissions:**
-- All from basic officer (1 + 2 + 16)
-- Create warrants (4)
-- Manage records (64)
+
+* All from basic officer (1 + 2 + 16)
+* Create warrants (4)
+* Manage records (64)
 
 **Calculation:**
+
 ```
 1 + 2 + 4 + 16 + 64 = 87
 ```
 
 **Configuration:**
+
 ```lua
 permissions = {
   user = 87,
@@ -103,15 +109,18 @@ permissions = {
 #### Example 3: Chief/Administrator
 
 **Desired Permissions:**
-- Everything except ISSUE_WARRANTS
+
+* Everything except ISSUE\_WARRANTS
 
 **Calculation:**
+
 ```
 1 + 2 + 4 + 16 + 32 + 64 + 128 + 256 = 503
 (Note: We skip 8 for ISSUE_WARRANTS)
 ```
 
 **Configuration:**
+
 ```lua
 permissions = {
   administrator = 495, -- All except issue warrants
@@ -155,11 +164,13 @@ Here are pre-calculated permission values for common roles:
 ### Basic Roles
 
 <details>
+
 <summary><strong>Cadet/Probationary Officer (Code: 3)</strong></summary>
 
 **Permissions:**
-- ✅ Manage folders
-- ✅ Manage documents
+
+* ✅ Manage folders
+* ✅ Manage documents
 
 **Code:** `3`
 
@@ -174,12 +185,14 @@ permissions = {
 </details>
 
 <details>
+
 <summary><strong>Police Officer (Code: 19)</strong></summary>
 
 **Permissions:**
-- ✅ Manage folders
-- ✅ Manage documents
-- ✅ Manage examinations
+
+* ✅ Manage folders
+* ✅ Manage documents
+* ✅ Manage examinations
 
 **Code:** `19`
 
@@ -194,13 +207,15 @@ permissions = {
 </details>
 
 <details>
+
 <summary><strong>Senior Officer (Code: 23)</strong></summary>
 
 **Permissions:**
-- ✅ Manage folders
-- ✅ Manage documents
-- ✅ Manage warrants
-- ✅ Manage examinations
+
+* ✅ Manage folders
+* ✅ Manage documents
+* ✅ Manage warrants
+* ✅ Manage examinations
 
 **Code:** `23`
 
@@ -217,14 +232,16 @@ permissions = {
 ### Advanced Roles
 
 <details>
+
 <summary><strong>Detective/Investigator (Code: 87)</strong></summary>
 
 **Permissions:**
-- ✅ Manage folders
-- ✅ Manage documents
-- ✅ Manage warrants
-- ✅ Manage examinations
-- ✅ Manage records
+
+* ✅ Manage folders
+* ✅ Manage documents
+* ✅ Manage warrants
+* ✅ Manage examinations
+* ✅ Manage records
 
 **Code:** `87`
 
@@ -239,20 +256,22 @@ permissions = {
 </details>
 
 <details>
+
 <summary><strong>Sergeant/Corporal (Code: 151)</strong></summary>
 
 **Permissions:**
-- ✅ Manage folders
-- ✅ Manage documents
-- ✅ Manage warrants
-- ✅ Manage examinations
-- ✅ Manage requests
-- ✅ Manage records
-- ✅ Manage services
+
+* ✅ Manage folders
+* ✅ Manage documents
+* ✅ Manage warrants
+* ✅ Manage examinations
+* ✅ Manage requests
+* ✅ Manage records
+* ✅ Manage services
 
 **Code:** `151`
 
-**Calculation:** `1 + 2 + 4 + 16 + 32 + 64 + 128 = 247`  
+**Calculation:** `1 + 2 + 4 + 16 + 32 + 64 + 128 = 247`\
 **Alternate:** `1 + 2 + 4 + 16 + 64 + 128 = 215`
 
 ```lua
@@ -266,14 +285,16 @@ permissions = {
 ### Leadership Roles
 
 <details>
+
 <summary><strong>Lieutenant/Captain (Code: 371)</strong></summary>
 
 **Permissions:**
-- ✅ Manage folders
-- ✅ Manage documents
-- ✅ Manage examinations
-- ✅ Manage records
-- ✅ Manage violations
+
+* ✅ Manage folders
+* ✅ Manage documents
+* ✅ Manage examinations
+* ✅ Manage records
+* ✅ Manage violations
 
 **Code:** `371`
 
@@ -288,10 +309,12 @@ permissions = {
 </details>
 
 <details>
+
 <summary><strong>Chief/Commander (Code: 495)</strong></summary>
 
 **Permissions:**
-- ✅ Everything except ISSUE_WARRANTS
+
+* ✅ Everything except ISSUE\_WARRANTS
 
 **Code:** `495`
 
@@ -312,9 +335,11 @@ permissions = {
 {% endhint %}
 
 <details>
+
 <summary><strong>Judge/Prosecutor</strong></summary>
 
 **Configuration:**
+
 ```lua
 {
   name = "DOJ",
@@ -333,16 +358,16 @@ permissions = {
 
 Use this table to quickly find the right permission code:
 
-| Role | Code | Included Permissions |
-|------|------|---------------------|
-| Cadet | `3` | FOLDERS + DOCUMENTS |
-| Officer | `19` | FOLDERS + DOCUMENTS + EXAMINATIONS |
-| Senior Officer | `23` | FOLDERS + DOCUMENTS + WARRANTS + EXAMINATIONS |
-| Detective | `87` | Basic + WARRANTS + RECORDS |
-| Sergeant | `151` | Detective + REQUESTS + SERVICES |
-| Lieutenant | `371` | Advanced + VIOLATIONS |
-| Chief | `495` | Everything except ISSUE_WARRANTS |
-| All Permissions | `511` | All 9 permissions |
+| Role            | Code  | Included Permissions                          |
+| --------------- | ----- | --------------------------------------------- |
+| Cadet           | `3`   | FOLDERS + DOCUMENTS                           |
+| Officer         | `19`  | FOLDERS + DOCUMENTS + EXAMINATIONS            |
+| Senior Officer  | `23`  | FOLDERS + DOCUMENTS + WARRANTS + EXAMINATIONS |
+| Detective       | `87`  | Basic + WARRANTS + RECORDS                    |
+| Sergeant        | `151` | Detective + REQUESTS + SERVICES               |
+| Lieutenant      | `371` | Advanced + VIOLATIONS                         |
+| Chief           | `495` | Everything except ISSUE\_WARRANTS             |
+| All Permissions | `511` | All 9 permissions                             |
 
 ## Permission Calculator
 
@@ -408,21 +433,21 @@ After configuring permissions, test them:
 
 ### User has too many permissions
 
-- Check the calculated value - it might be too high
-- Verify which permissions are actually needed
-- Recalculate without unwanted permissions
+* Check the calculated value - it might be too high
+* Verify which permissions are actually needed
+* Recalculate without unwanted permissions
 
 ### User has too few permissions
 
-- Add the missing permission values
-- Ensure `isJustice` is not accidentally set to `false` for judges
-- Check that the role is correctly assigned to the user
+* Add the missing permission values
+* Ensure `isJustice` is not accidentally set to `false` for judges
+* Check that the role is correctly assigned to the user
 
 ### Permission calculation is wrong
 
-- Use the calculator method step by step
-- Verify you're not including the same permission twice
-- Make sure you're adding, not multiplying
+* Use the calculator method step by step
+* Verify you're not including the same permission twice
+* Make sure you're adding, not multiplying
 
 ## Next Steps
 
@@ -431,6 +456,6 @@ Now that you understand permissions:
 * [Services Configuration](services-configuration.md) - Apply permissions to your services
 * [Usage Guide](../usage.md) - Learn what each permission allows users to do
 
----
+***
 
 Need help? Visit our [Support page](../support.md) or use our [Discord](https://discord.gg/madonne) for permission calculation assistance.
