@@ -11,10 +11,8 @@ This guide will walk you through the installation process of **Madonne DOJ** on 
 
 Before installing Madonne DOJ, make sure you have:
 
-- ✅ A **FiveM Server** up and running
-- ✅ A **MySQL Database** configured
-- ✅ **ESX or QBCore Framework** installed (depending on your server configuration)
-- ✅ Basic knowledge of FiveM server administration
+* ✅ A **FiveM Server** up and running
+* ✅ A **MySQL Database** configured
 
 ## Installation Steps
 
@@ -38,12 +36,14 @@ Execute the SQL file to create the necessary database tables:
 ```
 
 You can import it using:
-- **phpMyAdmin**: Import the `db.sql` file
-- **MySQL Command Line**: 
-  ```bash
-  mysql -u username -p database_name < db.sql
-  ```
-- **HeidiSQL** or any other database management tool
+
+* **phpMyAdmin**: Import the `db.sql` file
+*   **MySQL Command Line**:
+
+    ```bash
+    mysql -u username -p database_name < db.sql
+    ```
+* **HeidiSQL** or any other database management tool
 
 ### Step 3: Configure the Script
 
@@ -67,7 +67,7 @@ CONFIG_MADONNE_DOJ = {
 }
 ```
 
-For detailed configuration options, see the [Configuration Guide](configuration/README.md).
+For detailed configuration options, see the [Configuration Guide](configuration/).
 
 ### Step 4: Add to Server Configuration
 
@@ -80,6 +80,7 @@ ensure MS_MaodonneDOJ
 Make sure it's placed **after** your framework (ESX/QBCore) in the load order.
 
 **Example:**
+
 ```cfg
 ensure es_extended
 ensure oxmysql
@@ -109,31 +110,31 @@ To verify the installation was successful:
 
 ### The tablet won't open
 
-- ✅ Check that you have the necessary permissions in your job/service
-- ✅ Verify the command in `config.lua` matches what you're typing
-- ✅ Check the server console for errors
+* ✅ Check that you have the necessary permissions in your job/service
+* ✅ Verify the command in `config.lua` matches what you're typing
+* ✅ Check the server console for errors
 
 ### Database errors
 
-- ✅ Ensure `db.sql` was imported correctly
-- ✅ Check your database credentials
-- ✅ Verify all tables were created
+* ✅ Ensure `db.sql` was imported correctly
+* ✅ Check your database credentials
+* ✅ Verify all tables were created
 
 ### Configuration errors
 
-- ✅ Make sure your `config.lua` syntax is correct
-- ✅ Verify all required fields are filled
-- ✅ Enable `DebugMode = true` to see detailed logs
+* ✅ Make sure your `config.lua` syntax is correct
+* ✅ Verify all required fields are filled
+* ✅ Enable `DebugMode = true` to see detailed logs
 
 ## Next Steps
 
 Now that Madonne DOJ is installed, you should:
 
-1. **[Configure your services](configuration/services-configuration.md)** - Set up your police and justice departments
-2. **[Configure permissions](configuration/permissions-system.md)** - Define who can do what
-3. **[Learn how to use it](usage.md)** - Understand the tablet interface
-4. **[Set up language](internationalization/README.md)** - Configure your preferred language
+1. [**Configure your services**](configuration/services-configuration.md) - Set up your police and justice departments
+2. [**Configure permissions**](configuration/permissions-system.md) - Define who can do what
+3. [**Learn how to use it**](usage.md) - Understand the tablet interface
+4. [**Set up language**](broken-reference) - Configure your preferred language
 
----
+***
 
 Need help? Check our [Support page](support.md) or join our [Discord](https://discord.gg/madonne).
