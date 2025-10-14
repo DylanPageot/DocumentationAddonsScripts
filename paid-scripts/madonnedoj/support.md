@@ -1,0 +1,414 @@
+---
+cover: .gitbook/assets/banner.png
+coverY: 0
+---
+
+# Need Help?
+
+Having trouble with Madonne DOJ? We're here to help! This page provides various support resources and troubleshooting guidance.
+
+## Support Channels
+
+### 💬 Discord Support (Recommended)
+
+Join our Discord server for the fastest support:
+
+**[https://discord.gg/madonne](https://discord.gg/madonne)**
+
+- Get help from the community
+- Chat with other server administrators
+- Receive official support from MadonneStudio team
+- Report bugs and suggest features
+
+### 📧 Email Support
+
+For detailed inquiries or business matters:
+
+**[contact@madonnestudio.com](mailto:contact@madonnestudio.com)**
+
+- Include your server name
+- Describe the issue in detail
+- Attach screenshots if relevant
+- Allow 24-48 hours for response
+
+### 🌐 Website
+
+Visit our official website for more information:
+
+**[https://madonnestudio.com](https://madonnestudio.com)**
+
+- Browse other MadonneStudio products
+- Check latest news and updates
+- Access additional resources
+
+---
+
+## Before Requesting Support
+
+Before reaching out for help, please try these steps:
+
+### 1. Check the Documentation
+
+- ✅ Read relevant documentation sections
+- ✅ Search for your specific issue
+- ✅ Review configuration examples
+
+### 2. Enable Debug Mode
+
+Enable debug mode to see detailed error messages:
+
+```lua
+CONFIG_MADONNE_DOJ = {
+  DebugMode = true, -- Enable this
+}
+```
+
+Then restart the script:
+```
+restart mg-dojscript
+```
+
+### 3. Check Server Console
+
+Press **F8** in-game to open the console and look for:
+- ❌ Red error messages
+- ⚠️ Yellow warnings
+- 🔍 Debug information (if enabled)
+
+### 4. Reproduce the Issue
+
+Try to reproduce the problem:
+1. Note the exact steps that cause the issue
+2. Check if it happens every time
+3. Test with different users/roles
+4. Document what you were trying to do
+
+---
+
+## Common Issues
+
+### Installation Issues
+
+<details>
+<summary><strong>Script won't start / Database errors</strong></summary>
+
+**Symptoms:**
+- Script fails to load
+- SQL errors in console
+- Missing tables
+
+**Solutions:**
+1. ✅ Verify `db.sql` was imported correctly
+2. ✅ Check database credentials in your framework
+3. ✅ Ensure all tables were created
+4. ✅ Check for table name conflicts
+
+</details>
+
+<details>
+<summary><strong>Tablet command doesn't work</strong></summary>
+
+**Symptoms:**
+- `/tablet` command doesn't respond
+- No interface opens
+
+**Solutions:**
+1. ✅ Verify command in `config.lua`
+2. ✅ Check if player is assigned to a service
+3. ✅ Look for errors in console (F8)
+4. ✅ Ensure script is started after framework
+
+</details>
+
+### Configuration Issues
+
+<details>
+<summary><strong>Permissions not working correctly</strong></summary>
+
+**Symptoms:**
+- Users have wrong permissions
+- Sections not visible
+- Can't perform actions
+
+**Solutions:**
+1. ✅ Recalculate permission values
+2. ✅ Verify service configuration
+3. ✅ Check role assignments
+4. ✅ Review [Permissions System](configuration/permissions-system.md)
+
+</details>
+
+<details>
+<summary><strong>Language not changing</strong></summary>
+
+**Symptoms:**
+- UI still in wrong language
+- Translations not appearing
+
+**Solutions:**
+1. ✅ Check `LocaleUi` value in `config.lua`
+2. ✅ Verify language file exists in `/ui/locales/`
+3. ✅ Ensure JSON syntax is valid
+4. ✅ Restart the script
+5. ✅ Clear browser cache (Ctrl+F5)
+
+</details>
+
+### Usage Issues
+
+<details>
+<summary><strong>Can't create investigations/documents</strong></summary>
+
+**Symptoms:**
+- Create button not visible
+- Nothing happens when clicking create
+- Save fails
+
+**Solutions:**
+1. ✅ Check your permissions
+2. ✅ Ensure you're assigned to a service
+3. ✅ Fill all required fields
+4. ✅ Check console for errors
+
+</details>
+
+<details>
+<summary><strong>Warrants not being issued</strong></summary>
+
+**Symptoms:**
+- Can't sign warrants
+- Issue button not available
+
+**Solutions:**
+1. ✅ Only justice services can issue warrants
+2. ✅ Verify `isJustice = true` in config
+3. ✅ Check if user has `ISSUE_WARRANTS` permission (or is justice)
+4. ✅ Ensure warrant is properly filled out
+
+</details>
+
+<details>
+<summary><strong>Discord webhook not working</strong></summary>
+
+**Symptoms:**
+- No notifications in Discord
+- Webhook errors in console
+
+**Solutions:**
+1. ✅ Verify webhook URL is correct
+2. ✅ Check Discord server settings
+3. ✅ Ensure webhook wasn't deleted
+4. ✅ Test with a simple message
+5. ✅ Check firewall settings
+
+</details>
+
+### Performance Issues
+
+<details>
+<summary><strong>Tablet is slow/laggy</strong></summary>
+
+**Symptoms:**
+- Interface loads slowly
+- Actions take long time
+- Freezing
+
+**Solutions:**
+1. ✅ Check server performance
+2. ✅ Optimize database queries
+3. ✅ Reduce number of records
+4. ✅ Check client-side performance
+5. ✅ Clear browser cache
+
+</details>
+
+---
+
+## Reporting Bugs
+
+When reporting a bug, please include:
+
+### Required Information
+
+1. **Script Version**
+   - What version of Madonne DOJ?
+   
+2. **FiveM Server Info**
+   - Server artifacts version
+   - Framework (ESX/QBCore)
+   - Other related scripts
+
+3. **Issue Description**
+   - What were you trying to do?
+   - What actually happened?
+   - What did you expect to happen?
+
+4. **Steps to Reproduce**
+   ```
+   1. Go to ...
+   2. Click on ...
+   3. Enter ...
+   4. Error occurs
+   ```
+
+5. **Console Errors**
+   - Server console errors
+   - Client console errors (F8)
+   - Screenshots of errors
+
+6. **Configuration**
+   - Relevant config.lua sections
+   - Service setup
+   - Permission values
+
+### Bug Report Template
+
+```
+**Madonne DOJ Version:** 1.0.0
+**FiveM Artifacts:** 6683
+**Framework:** ESX Legacy
+
+**Description:**
+Describe the bug here...
+
+**Steps to Reproduce:**
+1. 
+2. 
+3. 
+
+**Expected Behavior:**
+What should happen...
+
+**Actual Behavior:**
+What actually happens...
+
+**Console Errors:**
+```
+Paste errors here
+```
+
+**Screenshots:**
+[Attach if relevant]
+
+**Additional Context:**
+Any other relevant information...
+```
+
+---
+
+## Feature Requests
+
+Have an idea for a new feature? We'd love to hear it!
+
+### How to Submit
+
+1. **Join our Discord** - [https://discord.gg/madonne](https://discord.gg/madonne)
+2. **Go to feature requests channel**
+3. **Describe your idea** including:
+   - What feature you want
+   - Why it would be useful
+   - How it should work
+   - Who would benefit from it
+
+### What Makes a Good Feature Request
+
+✅ **Good:**
+- Clear description of the feature
+- Specific use case
+- Benefits explained
+- Realistic scope
+
+❌ **Not Good:**
+- Vague requests
+- "Add everything from X script"
+- Features that would break core functionality
+- Highly specific to one server
+
+---
+
+## FAQ (Frequently Asked Questions)
+
+### Can I modify the script?
+
+Depends on your license. Check your purchase agreement. Generally:
+- ✅ You can modify for your server
+- ❌ You cannot resell or redistribute
+- ❌ You cannot share modifications publicly
+
+### Can I use this with QBCore?
+
+The script may need adaptation for QBCore. Check with support for compatibility.
+
+### How many services can I add?
+
+There's no hard limit, but practical considerations:
+- Keep it reasonable (5-15 services typical)
+- Too many services can clutter the interface
+- Consider database performance with many services
+
+### Can players change language individually?
+
+No, language is server-wide. All players see the same language configured in `config.lua`.
+
+### Do I need to know coding to use this?
+
+Basic knowledge helps for configuration, but:
+- Installation is straightforward
+- Configuration uses simple Lua
+- No coding needed for daily use
+- Support available if you get stuck
+
+### How often is the script updated?
+
+Updates are released for:
+- Bug fixes (as needed)
+- New features (periodically)
+- Security patches (immediately)
+- Check Discord for announcements
+
+---
+
+## Additional Resources
+
+### Documentation Sections
+
+* [Installation Guide](installation.md)
+* [Configuration Overview](configuration/README.md)
+* [Permissions System](configuration/permissions-system.md)
+* [Adding Languages](internationalization/adding-a-new-language.md)
+* [Usage Guide](usage.md)
+
+### External Resources
+
+- [FiveM Documentation](https://docs.fivem.net/)
+- [Lua Documentation](https://www.lua.org/manual/5.4/)
+- [Vue.js Documentation](https://vuejs.org/)
+
+---
+
+## Contact Information
+
+### MadonneStudio
+
+- 🌐 **Website:** [https://madonnestudio.com](https://madonnestudio.com)
+- 💬 **Discord:** [https://discord.gg/madonne](https://discord.gg/madonne)
+- 📧 **Email:** [contact@madonnestudio.com](mailto:contact@madonnestudio.com)
+
+### Business Hours
+
+Support is available:
+- Monday - Friday: 9 AM - 6 PM (UTC+1)
+- Weekend: Limited support (Discord community)
+- Emergency: Email with "URGENT" in subject
+
+---
+
+<div align="center">
+
+**Thank you for using Madonne DOJ!**
+
+We're committed to providing the best law enforcement management system for FiveM.
+
+*Developed by MadonneStudio © 2025 - All rights reserved*
+
+</div>
