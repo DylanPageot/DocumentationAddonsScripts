@@ -149,7 +149,6 @@ CONFIG_MADONNE_DOJ = {
 Now that you've configured the main settings, continue with:
 
 * [Services Configuration](services-configuration.md) - Set up your police and justice departments
-* [Permissions System](permissions-system.md) - Configure who can do what
 
 ***
 

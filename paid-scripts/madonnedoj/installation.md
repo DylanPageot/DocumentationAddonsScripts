@@ -131,9 +131,8 @@ To verify the installation was successful:
 Now that Madonne DOJ is installed, you should:
 
 1. [**Configure your services**](configuration/services-configuration.md) - Set up your police and justice departments
-2. [**Configure permissions**](configuration/permissions-system.md) - Define who can do what
-3. [**Learn how to use it**](usage.md) - Understand the tablet interface
-4. [**Set up language**](broken-reference) - Configure your preferred language
+2. [**Learn how to use it**](usage.md) - Understand the tablet interface
+3. [**Set up language**](broken-reference) - Configure your preferred language
 
 ***
 

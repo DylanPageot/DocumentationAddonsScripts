@@ -15,10 +15,6 @@ Each service in the configuration follows this structure:
 {
   name = "LSPD",
   fullName = "Los Santos Police Department",
-  permissions = {
-    user = 371,
-    administrator = 495,
-  },
   isJustice = false
 }
 ```
@@ -29,8 +25,6 @@ Each service in the configuration follows this structure:
 |----------|------|----------|-------------|
 | `name` | `string` | ✅ Yes | **Unique** short name/code for the service |
 | `fullName` | `string` | ✅ Yes | Full display name of the service |
-| `permissions.user` | `number` | ✅ Yes | Permission value for regular users |
-| `permissions.administrator` | `number` | ✅ Yes | Permission value for administrators |
 | `isJustice` | `boolean` | ✅ Yes | Whether this is a judicial service |
 
 {% hint style="danger" %}
@@ -47,10 +41,6 @@ Police services are standard law enforcement agencies. They have configurable pe
 {
   name = "LSPD", -- MUST BE UNIQUE
   fullName = "Los Santos Police Department",
-  permissions = {
-    user = 19,        -- Basic officer permissions
-    administrator = 495, -- Supervisor/Chief permissions
-  },
   isJustice = false
 }
 ```
@@ -64,10 +54,6 @@ Police services are standard law enforcement agencies. They have configurable pe
 {
   name = "LSPD",
   fullName = "Los Santos Police Department",
-  permissions = {
-    user = 371, 
-    administrator = 495,
-  },
   isJustice = false
 }
 ```
@@ -81,10 +67,6 @@ Police services are standard law enforcement agencies. They have configurable pe
 {
   name = "LSSD",
   fullName = "Los Santos Sheriff's Department",
-  permissions = {
-    user = 371,
-    administrator = 495,
-  },
   isJustice = false
 }
 ```
@@ -98,10 +80,6 @@ Police services are standard law enforcement agencies. They have configurable pe
 {
   name = "SAHP",
   fullName = "San Andreas Highway Patrol",
-  permissions = {
-    user = 371,
-    administrator = 495,
-  },
   isJustice = false
 }
 ```
@@ -115,10 +93,6 @@ Police services are standard law enforcement agencies. They have configurable pe
 {
   name = "FIB",
   fullName = "Federal Investigation Bureau",
-  permissions = {
-    user = 371,
-    administrator = 495,
-  },
   isJustice = false
 }
 ```
@@ -135,11 +109,7 @@ Justice services (`isJustice = true`) have special properties and automatically 
 {
   name = "DOJ",
   fullName = "Department of Justice",
-  permissions = { -- WILL BE IGNORED
-    user = 0,
-    administrator = 0,
-  },
-  isJustice = true -- Grants ALL permissions automatically
+  isJustice = true
 }
 ```
 
@@ -152,11 +122,7 @@ Services with `isJustice = true` have unlimited access:
 - ✅ **Issue warrants** - Create and sign arrest/search warrants
 - ✅ **Sign warrants** - Approve warrants created by police
 - ✅ **Manage all records** - Edit criminal records
-- ✅ **Override permissions** - Bypass service restrictions
 
-{% hint style="info" %}
-**Note:** The `permissions` values are ignored when `isJustice = true`. You can set them to 0 or any value.
-{% endhint %}
 
 ## Complete Configuration Example
 
@@ -168,37 +134,21 @@ Services = {
   {
     name = "LSPD",
     fullName = "Los Santos Police Department",
-    permissions = {
-      user = 371,
-      administrator = 495,
-    },
     isJustice = false
   },
   {
     name = "LSSD",
     fullName = "Los Santos Sheriff's Department",
-    permissions = {
-      user = 371,
-      administrator = 495,
-    },
     isJustice = false
   },
   {
     name = "SAHP",
     fullName = "San Andreas Highway Patrol",
-    permissions = {
-      user = 371,
-      administrator = 495,
-    },
     isJustice = false
   },
   {
     name = "FIB",
     fullName = "Federal Investigation Bureau",
-    permissions = {
-      user = 371,
-      administrator = 495,
-    },
     isJustice = false
   },
   
@@ -206,34 +156,15 @@ Services = {
   {
     name = "DOJ",
     fullName = "Department of Justice",
-    permissions = {
-      user = 0,
-      administrator = 0,
-    },
     isJustice = true
   },
 }
 ```
 
-## Understanding Permission Values
-
-The numbers in `permissions.user` and `permissions.administrator` are calculated using a bitmask system.
-
-**Common permission values:**
-- `19` - Basic officer (folders, documents, examinations)
-- `87` - Detective (+ warrants, records)
-- `371` - Sergeant (+ requests, services)
-- `495` - Chief (all except issuing warrants)
-- `511` - All permissions
-
-For a detailed explanation of how to calculate these values, see:
-* [Permissions System](permissions-system.md)
-
 ## Best Practices
 
 ✅ **Do:**
 - Use clear, recognizable service codes (`LSPD`, `SAHP`, etc.)
-- Set appropriate permissions for each role level
 - Have at least one justice service for warrant management
 - Keep service names consistent with your server's departments
 
@@ -260,19 +191,9 @@ To add a new service to your server:
 {
   name = "PARK",
   fullName = "San Andreas Park Rangers",
-  permissions = {
-    user = 19,    -- Basic permissions
-    administrator = 151, -- More permissions for supervisors
-  },
   isJustice = false
 }
 ```
-
-## Next Steps
-
-Now that you understand services, learn about the permissions system:
-
-* [Permissions System](permissions-system.md) - Learn how to calculate permission values
 
 ---
 

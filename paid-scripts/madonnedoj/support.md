@@ -110,7 +110,6 @@ Try to reproduce the problem:
 1. ✅ Recalculate permission values
 2. ✅ Verify service configuration
 3. ✅ Check role assignments
-4. ✅ Review [Permissions System](configuration/permissions-system.md)
 
 </details>
 
