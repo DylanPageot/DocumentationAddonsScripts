@@ -1,8 +1,3 @@
----
-cover: ../.gitbook/assets/banner.png
-coverY: 0
----
-
 # Adding a New Language
 
 This guide will walk you through adding a new language translation to Madonne DOJ. Whether you want to add Spanish, German, Portuguese, or any other language, follow these steps.

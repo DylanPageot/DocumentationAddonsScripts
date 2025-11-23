@@ -1,8 +1,3 @@
----
-cover: .gitbook/assets/banner.png
-coverY: 0
----
-
 # Need Help?
 
 Having trouble with Madonne DOJ? We're here to help! This page provides various support resources and troubleshooting guidance.
@@ -214,7 +209,7 @@ Try to reproduce the problem:
 
 ***
 
-## FAQ&#x20;
+## FAQ
 
 ### Can I modify the script?
 
