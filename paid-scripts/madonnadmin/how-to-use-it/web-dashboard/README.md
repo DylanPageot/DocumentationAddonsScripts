@@ -26,7 +26,7 @@ This flexibility in search criteria guarantees maximum accessibility, regardless
 
 When you perform a search for a player, the Madonn’Admin Web system will show you a structured and detailed result that will look like the example illustrated below.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 The displayed result usually includes essential information about the player, such as their username, the total time they have spent on the server, the date of their last connection as well as the date of their first connection. You will also be able to see their current status, indicating whether they are online or offline, as well as data regarding their sanction history, such as the number of Warns, Kicks, and bans they have received. In case of multiple players sharing the same nickname, the display is designed to handle this situation by allowing you to view an expanded list. By default, up to 10 profiles are displayed, but you can adjust this number to display up to 100 players to more easily browse the results and identify the desired profile. This presentation ensures clear and detailed data management, facilitating your searches even in complex situations.
 
@@ -36,7 +36,7 @@ The various features located in the upper right corner of the interface offer co
 
 Next, the bell icon is used to centralize important notifications related to your use of the site. These notifications can include alerts about calls, accessible only from the administrator rank, as well as general or specific announcements for your server, as illustrated below.
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, on the far right, the logo representing your Madonn’Admin profile picture opens a drop-down menu with two main sections: settings and logout. In settings, you can access essential tools such as your Community Token, essential for linking your account to the FiveM server, and change your password if necessary. The logout function, meanwhile, allows you to exit your session securely.
 
@@ -47,6 +47,3 @@ The display located in the lower left corner of the site interface fulfills an i
 #### MAIN MENU
 
 Under your community name, you will discover a complete and organized list of the main features offered by Madonn’Admin Web, bringing together all the essential tools for managing and monitoring your server. Among these features, you will be able to access a section dedicated to all the options and settings available on the platform, allowing a global vision and simplified management. You will also find a specific category to consult and administer the servers that are connected to Madonn’Admin Web, thus offering centralized and efficient management of each linked server. In addition, a section is dedicated to players, where you can search, analyze, and interact with the profiles of the members of your community, accessing detailed information such as their playing times or their connection histories. Another part is dedicated to information concerning the staff, which includes the management of the administrators and moderators of your server, their actions, and their current status. Appeals, on the other hand, are a feature accessible exclusively from the administrator rank, allowing to manage requests or alerts submitted by players requiring a ban from the server. Finally, logs complete this list by offering precise and detailed monitoring of events occurring on the server, such as connections, disconnections, or commands executed, to guarantee total transparency and optimal control. This structured list of features highlights the extent of the tools available, all designed to facilitate management and improve the efficiency of administration.
-
-
-

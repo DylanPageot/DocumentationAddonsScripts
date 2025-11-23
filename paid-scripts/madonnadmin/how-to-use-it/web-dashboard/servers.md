@@ -2,7 +2,7 @@
 
 The Servers category plays a key role in using Madonn’Admin Web by giving you the ability to select and manage the server on which you want to perform various actions or view specific data. With this feature, you can define the active server among those linked to your account, allowing for smooth navigation and targeted access to relevant information. Once the server is selected, this category gives you access to a wide range of management options and tools tailored to the server.
 
-<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 The section at the top of the page, titled with the name of your server, offers quick and comprehensive access to a set of crucial information and statistics, designed to provide you with a clear and detailed view of the activity on your server. This section works similarly to the Dashboard, but is specifically dedicated to the selected server. Among the information displayed, you will be able to view the total number of players currently connected, allowing you to monitor the server activity live.
 
@@ -14,7 +14,7 @@ The Online Players section is an essential tool to view and manage information a
 
 This flexibility ensures simplified navigation and effective supervision, even in situations where many players are active on the server.
 
-<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 The Additional Information section offers essential tools to strengthen the management and supervision of your server, providing direct access to two main features: an admin chat and a list of flags of connected players.
 
@@ -28,7 +28,7 @@ It is important to note that if no players are connected to the server, the flag
 
 In summary, the Additional Information section combines communication tools with advanced behavioral indicators to give administrators and staff greater control over player interactions and behaviors on the server.
 
-<figure><img src="../../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 The Broadcast Message section is specifically designed to allow for quick and efficient communication with all players connected to your server. This feature gives you the ability to send a global message to all players, directly visible in the in-game chat. These messages, identified by a clear designator in the format “Your server name: \[Your message]”, are designed to attract players’ attention and convey important information in a uniform and professional manner. By default, broadcast messages appear in blue in the chat, but this color can be customized to suit your preferences or your server’s visual identity. In addition, this section offers pre-configured buttons for frequently used messages, making it quick and easy to broadcast essential reminders. Among these standard messages, you will find options such as reminders to encourage players to use the report command in case of problems, a notification to read or reread the server rules, a direct link to the official community Discord, announcements specifying the times of regular server restarts, or other messages. They are fully customizable, allowing you to add, edit, or remove announcements according to the evolving needs of your community.
 

@@ -1,6 +1,6 @@
 # Logs
 
-<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 By clicking on the fifth button in the menu, you access an interface dedicated to displaying server logs, structured in a similar way to that available on the web version of Madonn’Admin. This section offers you a detailed and organized view of the different actions recorded on the server. You can filter the logs according to specific categories to meet your needs. For example, you can choose to display only connections, messages sent, weapon shots, injuries suffered or inflicted, player deaths, or explosions that took place on the server.
 

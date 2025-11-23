@@ -14,7 +14,7 @@ The rank management system has been designed with a strict hierarchy in order to
 
 The interface that appears corresponds to the one shown in the image below. It has been designed to be clear and ergonomic, bringing together the essential tools and information necessary for your moderation missions. You will find various options to follow the activities in progress on the server, intervene with players if necessary, or access important data, such as logs and player profiles.
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 To navigate efficiently through the different sections of your moderation menu, you have a series of icons located on the sidebar on the left of the interface. These icons are designed to provide quick and intuitive access to all the main features. Here is a detailed description of their usefulness:
 

@@ -1,6 +1,6 @@
 # Home interface
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 When you activate the menu to take your service as a moderator, the first page that appears is a detailed dashboard designed to provide you with an overview of essential information. This page centralizes several important elements (as above). First, it presents a complete list of staff members currently connected to the server. This list, organized in a clear and readable table, includes several precise columns such as the nickname of the staff members, allowing quick identification, their rank in the team (as moderator, administrator, or any other role), as well as their current status, indicating whether they are in moderation activity or in roleplay. That is, whether they have their menu in moderation mode or not.
 
