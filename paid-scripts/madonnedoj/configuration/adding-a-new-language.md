@@ -222,32 +222,29 @@ CONFIG_MADONNE_DOJ = {
 
 ### Step 7: Test Your Translation
 
-<<<<<<< HEAD:paid-scripts/madonnedoj/internationalization/adding-a-new-language.md
 1. **Restart the script:**
-   ```
-   restart MS_MaodonneDOJ
-   ```
-=======
-1.  **Restart the script:**
->>>>>>> 89aafa5654a6f06282db9c42da3b1e1883b744cc:paid-scripts/madonnedoj/configuration/adding-a-new-language.md
 
-    ```
-    restart mg-dojscript
-    ```
-2.  **Open the tablet:**
+```
+restart MS_MaodonneDOJ
+```
 
-    ```
-    /tablet
-    ```
-3. **Check all sections:**
-   * Dashboard
-   * Investigations
-   * Documents
-   * Warrants
-   * Examinations
-   * Records
-   * Violations
-   * Services
+2\. **Open the tablet:**
+
+```
+/tablet
+```
+
+3\. **Check all sections:**
+
+* Dashboard
+* Investigations
+* Documents
+* Warrants
+* Examinations
+* Records
+* Violations
+* Services
+
 4. **Look for:**
    * Missing translations (English text appearing)
    * Truncated text (too long for buttons)

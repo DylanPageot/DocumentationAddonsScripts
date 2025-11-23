@@ -22,7 +22,7 @@ The Search by ID section allows you to locate a player's Madonn'Admin profile us
 
 To do this, simply click on the part called "License" in the Identifier Name section, in order to choose the specific identifier you want to use for the search, and then enter the corresponding value in the field provided for this purpose. Once the identifier is entered and the search is launched, the system will provide you with the same detailed information as that obtained when searching by nickname. This includes essential data such as the player's profile, his statistics, his sanction history (as below).
 
-<figure><img src="../../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Show all players
 

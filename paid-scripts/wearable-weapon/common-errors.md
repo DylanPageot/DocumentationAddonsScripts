@@ -4,11 +4,11 @@
 
 <summary>You lack the required entitlement to use MS_WearableWeapon</summary>
 
-<img src="../../.gitbook/assets/image_2023-05-23_053137681.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/image_2023-05-23_053117219.png" alt="" data-size="original">
 
 This message indicates that you do not have permission to launch the Wearable Weapons resource.
 
-The causes can be multiple. We therefore advise you to check these different points :&#x20;
+The causes can be multiple. We therefore advise you to check these different points :
 
 * The Patreon key listed in your server.cfg does not contain a typing error.
 * The Patreon key listed in your server.cfg belongs to the FiveM account that was used to purchase our resource.

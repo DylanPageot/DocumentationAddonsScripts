@@ -1,8 +1,3 @@
----
-cover: ../.gitbook/assets/banner.png
-coverY: 0
----
-
 # Services Configuration
 
 The Services section allows you to configure all police and justice services available on your server. Each service can have its own permissions and access levels.
@@ -21,11 +16,11 @@ Each service in the configuration follows this structure:
 
 ### Properties
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| `name` | `string` | ✅ Yes | **Unique** short name/code for the service |
-| `fullName` | `string` | ✅ Yes | Full display name of the service |
-| `isJustice` | `boolean` | ✅ Yes | Whether this is a judicial service |
+| Property    | Type      | Required | Description                                |
+| ----------- | --------- | -------- | ------------------------------------------ |
+| `name`      | `string`  | ✅ Yes    | **Unique** short name/code for the service |
+| `fullName`  | `string`  | ✅ Yes    | Full display name of the service           |
+| `isJustice` | `boolean` | ✅ Yes    | Whether this is a judicial service         |
 
 {% hint style="danger" %}
 **Important:** The `name` property must be **unique** across all services. It's used as the service identifier throughout the system.
@@ -48,6 +43,7 @@ Police services are standard law enforcement agencies. They have configurable pe
 ### Common Police Services
 
 <details>
+
 <summary><strong>Los Santos Police Department (LSPD)</strong></summary>
 
 ```lua
@@ -61,6 +57,7 @@ Police services are standard law enforcement agencies. They have configurable pe
 </details>
 
 <details>
+
 <summary><strong>Los Santos Sheriff's Department (LSSD)</strong></summary>
 
 ```lua
@@ -74,6 +71,7 @@ Police services are standard law enforcement agencies. They have configurable pe
 </details>
 
 <details>
+
 <summary><strong>San Andreas Highway Patrol (SAHP)</strong></summary>
 
 ```lua
@@ -87,6 +85,7 @@ Police services are standard law enforcement agencies. They have configurable pe
 </details>
 
 <details>
+
 <summary><strong>Federal Investigation Bureau (FIB)</strong></summary>
 
 ```lua
@@ -117,12 +116,11 @@ Justice services (`isJustice = true`) have special properties and automatically 
 
 Services with `isJustice = true` have unlimited access:
 
-- ✅ **Access all folders** - View any investigation regardless of service
-- ✅ **View all documents** - Read all case files across services
-- ✅ **Issue warrants** - Create and sign arrest/search warrants
-- ✅ **Sign warrants** - Approve warrants created by police
-- ✅ **Manage all records** - Edit criminal records
-
+* ✅ **Access all folders** - View any investigation regardless of service
+* ✅ **View all documents** - Read all case files across services
+* ✅ **Issue warrants** - Create and sign arrest/search warrants
+* ✅ **Sign warrants** - Approve warrants created by police
+* ✅ **Manage all records** - Edit criminal records
 
 ## Complete Configuration Example
 
@@ -164,15 +162,17 @@ Services = {
 ## Best Practices
 
 ✅ **Do:**
-- Use clear, recognizable service codes (`LSPD`, `SAHP`, etc.)
-- Have at least one justice service for warrant management
-- Keep service names consistent with your server's departments
+
+* Use clear, recognizable service codes (`LSPD`, `SAHP`, etc.)
+* Have at least one justice service for warrant management
+* Keep service names consistent with your server's departments
 
 ❌ **Don't:**
-- Use duplicate service names
-- Give `isJustice = true` to police services
-- Use special characters in the `name` field
-- Change service names after data has been created
+
+* Use duplicate service names
+* Give `isJustice = true` to police services
+* Use special characters in the `name` field
+* Change service names after data has been created
 
 ## Adding a New Service
 
@@ -195,6 +195,6 @@ To add a new service to your server:
 }
 ```
 
----
+***
 
 Need help? Visit our [Support page](../support.md).

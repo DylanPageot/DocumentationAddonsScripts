@@ -1,8 +1,3 @@
----
-cover: .gitbook/assets/banner.png
-coverY: 0
----
-
 # Installation
 
 This guide will walk you through the installation process of **Madonne DOJ** on your FiveM server.
@@ -132,7 +127,7 @@ Now that Madonne DOJ is installed, you should:
 
 1. [**Configure your services**](configuration/services-configuration.md) - Set up your police and justice departments
 2. [**Learn how to use it**](usage.md) - Understand the tablet interface
-3. [**Set up language**](broken-reference) - Configure your preferred language
+3. [**Set up language**](broken-reference/) - Configure your preferred language
 
 ***
 

@@ -1,8 +1,3 @@
----
-cover: ../.gitbook/assets/banner.png
-coverY: 0
----
-
 # Main Configuration
 
 The main configuration section contains the general settings that affect the entire script's behavior.

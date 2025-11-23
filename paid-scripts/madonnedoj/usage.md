@@ -1,8 +1,3 @@
----
-cover: .gitbook/assets/banner.png
-coverY: 0
----
-
 # Usage Guide
 
 This guide will help you understand how to use the Madonne DOJ tablet interface effectively.
@@ -25,16 +20,40 @@ By default, this is `/tablet`, but your server administrator may have changed it
 
 The tablet interface is divided into two main parts:
 
+### Login or Register ?
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt="Screenshot of the account creation screen"><figcaption><p>Account creation screen</p></figcaption></figure>
+
+The first screen you will encounter is the account creation screen.&#x20;
+
+* Enter your role-play information (surname, first name, date of birth) and the department you wish to join.
+* Click on ‘Submit profile’ and a request will be sent to the managers of the requested service.
+
+> Administrators can also use the "Connect as a server admin" button to access their view.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt="Screenshot of the login screen"><figcaption><p>Login screen</p></figcaption></figure>
+
+Once your request has been accepted, you will be able to log in to your profile. Simply select it and click on ‘Login’.
+
+You also have the option to create other profiles (they are all linked to your Discord ID).
+
 ### Sidebar Menu (Left)
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt="Sidebar screenshot"><figcaption><p>Sidebar</p></figcaption></figure>
 
 The sidebar contains navigation icons for all available sections:
 
 * 📊 **Dashboard** - Your personal overview
+* ⚙️ **Services** - Service administration
 * 📁 **Investigations** - Case management
 * ⚖️ **Warrants** - Warrant system
 * 👤 **Records** - Criminal records
 * 🚨 **Violations** - Offense catalog
-* ⚙️ **Services** - Service administration
+* 🗄️**Archives** - Archived case viewing
+
+{% hint style="info" %}
+Click on your name to log out.
+{% endhint %}
 
 ### Main Content Area (Right)
 
@@ -43,6 +62,8 @@ The main area displays the content for the selected section.
 ## Features by Section
 
 ### 📊 Dashboard
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt="Dashboard screenshot"><figcaption><p>Dashboard</p></figcaption></figure>
 
 Your personal dashboard shows:
 
@@ -57,11 +78,41 @@ Your personal dashboard shows:
 
 ***
 
+### ⚙️ Services
+
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Detailed vue of a service</p></figcaption></figure>
+
+Manage service members and pending requests (Chiefs only).
+
+**What you can do:**
+
+* ✅ View service members
+* ✅ Approve pending members
+* ✅ Remove members from service
+* ✅ Manage service roster
+
+{% hint style="warning" %}
+**Required Permission:** `MANAGE_SERVICES` (128)
+{% endhint %}
+
+**Service Management:**
+
+1. View all current members
+2. See pending join requests
+3. Approve or deny requests
+4. Remove officers from service
+
+***
+
 ### 📁 Investigations
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt="Screenshot of the main view of investigations tab"><figcaption><p>Investigations main view</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Detailed view of an investigation</p></figcaption></figure>
 
 Manage investigation folders and cases.
 
-**What you can do:**
+**What you can do :**
 
 * ✅ Create new investigation folders
 * ✅ View all investigations (if you have access)
@@ -69,9 +120,18 @@ Manage investigation folders and cases.
 * ✅ Assign officers to cases
 * ✅ Assign services to investigations
 
+{% hint style="warning" %}
 **Required Permission:** `MANAGE_FOLDERS` (1)
+{% endhint %}
+
+{% hint style="info" %}
+* The investigations you are responsible for appear in purple.
+* You only have access to your own investigations or those of your department.
+{% endhint %}
 
 **How to create an investigation:**
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt="Creating an investigation" width="563"><figcaption><p>Creating an investigation</p></figcaption></figure>
 
 1. Click the **"+"** button
 2. Enter investigation title
@@ -82,42 +142,9 @@ Manage investigation folders and cases.
 
 ***
 
-### 📄 Documents
-
-Create and manage documents related to investigations.
-
-**What you can do:**
-
-* ✅ Create new documents
-* ✅ View documents (from your service or investigations you're assigned to)
-* ✅ Edit existing documents
-* ✅ Link documents to investigations
-* ✅ Assign officers to documents
-* ✅ Add suspects and witnesses
-
-**Required Permission:** `MANAGE_DOCUMENTS` (2)
-
-**Document Types:**
-
-* Reports
-* Evidence logs
-* Interview notes
-* Case summaries
-* Any custom document
-
-**How to create a document:**
-
-1. Click the **"+"** button
-2. Select the investigation folder
-3. Enter document title
-4. Add content/description
-5. Assign officers in charge
-6. Add related citizens
-7. Click **Save**
-
-***
-
 ### ⚖️ Warrants
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Detailed view of a warrant</p></figcaption></figure>
 
 Manage arrest warrants and search warrants.
 
@@ -129,10 +156,12 @@ Manage arrest warrants and search warrants.
 * ✅ Sign/Issue warrants (justice only)
 * ✅ Send warrants to Discord
 
+{% hint style="warning" %}
 **Required Permissions:**
 
 * `MANAGE_WARRANTS` (4) - Create and edit warrants
-* `ISSUE_WARRANTS` (8) - Sign and issue warrants (justice only)
+* `ISSUE_WARRANTS` (8) - Sign and issue warrants (justice department only)
+{% endhint %}
 
 **Warrant Types:**
 
@@ -154,10 +183,9 @@ Manage arrest warrants and search warrants.
 
 1. Click the **"+"** button
 2. Select warrant type (Arrest/Search)
-3. Choose investigation folder
-4. Select suspect from folder
-5. Enter details and probable cause
-6. Submit for approval
+3. Select suspect from folder
+4. Enter details and probable cause
+5. Submit for approval
 
 **How to issue a warrant (Justice only):**
 
@@ -170,7 +198,29 @@ Manage arrest warrants and search warrants.
 
 ***
 
-### 🎤 Examinations
+### 📄 Documents (only in investigation view)
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption><p>Detailed view of a document</p></figcaption></figure>
+
+Create and manage documents related to investigations.
+
+**What you can do:**
+
+* ✅ Create new documents
+* ✅ View documents (from your service or investigations you're assigned to)
+* ✅ Edit existing documents
+* ✅ Assign officers to documents
+* ✅ Add suspects and witnesses
+
+{% hint style="warning" %}
+**Required Permission:** `MANAGE_DOCUMENTS` (2)
+{% endhint %}
+
+***
+
+### 🎤 Examinations (only in investigation view)
+
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption><p>Detailed view of an examination</p></figcaption></figure>
 
 Record interrogations and witness statements.
 
@@ -182,21 +232,24 @@ Record interrogations and witness statements.
 * ✅ Record suspect/witness statements
 * ✅ Assign conducting officers
 
+{% hint style="warning" %}
 **Required Permission:** `MANAGE_EXAMINATIONS` (16)
+{% endhint %}
 
 **How to record an examination:**
 
 1. Click the **"+"** button
-2. Select investigation folder
-3. Enter examination title
-4. Select examinee (suspect/witness)
-5. Add interrogation details/transcript
-6. Assign officers present
-7. Click **Save**
+2. Enter examination title
+3. Select examinee (suspect/witness)
+4. Add interrogation details/transcript
+5. Assign officers present
+6. Click **Save**
 
 ***
 
 ### 👤 Records
+
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Detailed view of a criminal record</p></figcaption></figure>
 
 View and manage citizen criminal records.
 
@@ -208,22 +261,22 @@ View and manage citizen criminal records.
 * ✅ Create new citizen records
 * ✅ Update citizen information
 
+{% hint style="warning" %}
 **Required Permission:** `MANAGE_RECORDS` (64)
+{% endhint %}
 
 **How to search records:**
 
 1. Use the search bar
 2. Enter citizen name or ID
 3. Click on result to view full record
-4. See all investigations, warrants, violations
+4. See all investigations, warrants
 
 **Record Information Includes:**
 
 * Personal information
 * Investigation history
 * Active warrants
-* Past violations
-* Related documents
 
 ***
 
@@ -239,7 +292,9 @@ Manage the catalog of criminal offenses.
 * ✅ Set fines and jail times
 * ✅ Categorize offenses
 
+{% hint style="warning" %}
 **Required Permission:** `MANAGE_VIOLATIONS` (256)
+{% endhint %}
 
 **How to add a violation:**
 
@@ -261,82 +316,6 @@ Manage the catalog of criminal offenses.
 * Custom categories
 
 ***
-
-### ⚙️ Services
-
-Manage service members and pending requests (Chiefs only).
-
-**What you can do:**
-
-* ✅ View service members
-* ✅ Approve pending members
-* ✅ Remove members from service
-* ✅ Manage service roster
-
-**Required Permission:** `MANAGE_SERVICES` (128)
-
-**Service Management:**
-
-1. View all current members
-2. See pending join requests
-3. Approve or deny requests
-4. Remove officers from service
-
-***
-
-## Tips and Best Practices
-
-### Organization
-
-✅ **Do:**
-
-* Create investigation folders for each case
-* Link all related documents to investigations
-* Assign officers to cases they're working on
-* Keep descriptions clear and detailed
-
-❌ **Don't:**
-
-* Create duplicate investigations
-* Leave documents unlinked
-* Forget to assign officers
-* Use vague titles
-
-### Warrants
-
-✅ **Do:**
-
-* Provide detailed probable cause
-* Select the correct suspect
-* Wait for judicial approval before acting
-* Document warrant execution
-
-❌ **Don't:**
-
-* Create warrants without sufficient cause
-* Rush the approval process
-* Act on unsigned warrants
-* Forget to link to investigation
-
-### Documentation
-
-✅ **Do:**
-
-* Document all investigative actions
-* Record all examinations
-* Keep records up-to-date
-* Use proper grammar and spelling
-
-❌ **Don't:**
-
-* Skip documentation
-* Leave fields empty
-* Use abbreviations others won't understand
-* Mix personal and official notes
-
-## Keyboard Shortcuts
-
-Currently, there are no keyboard shortcuts. Navigate using mouse clicks.
 
 ## Troubleshooting
 
@@ -364,18 +343,19 @@ Currently, there are no keyboard shortcuts. Navigate using mouse clicks.
 
 To use each section, you need:
 
-| Section           | Required Permission  | Value |
-| ----------------- | -------------------- | ----- |
-| Dashboard         | (Any permission)     | -     |
-| Investigations    | MANAGE\_FOLDERS      | 1     |
-| Documents         | MANAGE\_DOCUMENTS    | 2     |
-| Warrants (Create) | MANAGE\_WARRANTS     | 4     |
-| Warrants (Issue)  | ISSUE\_WARRANTS      | 8     |
-| Examinations      | MANAGE\_EXAMINATIONS | 16    |
-| Requests          | MANAGE\_REQUESTS     | 32    |
-| Records           | MANAGE\_RECORDS      | 64    |
-| Services          | MANAGE\_SERVICES     | 128   |
-| Violations        | MANAGE\_VIOLATIONS   | 256   |
+| Section                | Required Permission  | Value |
+| ---------------------- | -------------------- | ----- |
+| Dashboard              | (Any permission)     | -     |
+| Investigations         | MANAGE\_FOLDERS      | 1     |
+| Documents              | MANAGE\_DOCUMENTS    | 2     |
+| Warrants (Create)      | MANAGE\_WARRANTS     | 4     |
+| Warrants (Issue)       | ISSUE\_WARRANTS      | 8     |
+| Examinations           | MANAGE\_EXAMINATIONS | 16    |
+| Requests               | MANAGE\_REQUESTS     | 32    |
+| Records                | MANAGE\_RECORDS      | 64    |
+| Services               | MANAGE\_SERVICES     | 128   |
+| Violations             | MANAGE\_VIOLATIONS   | 256   |
+| Archive investigations | ARCHIVE\_FOLDERS     | 512   |
 
 For more on permissions, see:
 
@@ -389,4 +369,3 @@ If you need assistance:
 * 💬 Ask your supervisor or chief
 * 🎫 Contact server administration
 * 📧 Report bugs to development team
-

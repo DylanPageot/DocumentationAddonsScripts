@@ -18,6 +18,6 @@ coverY: 0
 5. Drag this folder into your server's resources folder.
 6. Since the resource is already configured and ready to use, all you have to do is edit your server's configuration file (often caller _server.cfg_) and ad ensure _MS\_Wearable\_Weapons_ at the bottom of it.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 7. Start your server and enjoy your new script !
