@@ -36,6 +36,7 @@
       * [Players list](paid-scripts/madonnadmin/how-to-use-it/in-game-dashboard/players-list.md)
       * [Logs](paid-scripts/madonnadmin/how-to-use-it/in-game-dashboard/logs.md)
       * [Settings](paid-scripts/madonnadmin/how-to-use-it/in-game-dashboard/settings.md)
+      * [Report System](paid-scripts/madonnadmin/how-to-use-it/in-game-dashboard/report-system.md)
       * [In Game Commands](paid-scripts/madonnadmin/how-to-use-it/in-game-dashboard/in-game-commands.md)
     * [Discord Functionalities](paid-scripts/madonnadmin/how-to-use-it/discord-functionalities.md)
   * [API / Exports](paid-scripts/madonnadmin/api-exports.md)
