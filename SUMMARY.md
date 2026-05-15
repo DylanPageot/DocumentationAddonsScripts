@@ -74,10 +74,12 @@
 
 * [📢 Madonne Notify](free-scripts/madonne-notify/README.md)
   * [Installation](free-scripts/madonne-notify/installation.md)
+  * [Usage & API](free-scripts/madonne-notify/usage-and-api.md)
   * [Common Errors](free-scripts/madonne-notify/common-errors.md)
 * [🚗 Madonne Seatbelt](free-scripts/madonne-seatbelt/README.md)
   * [Installation](free-scripts/madonne-seatbelt/installation.md)
   * [Configuration](free-scripts/madonne-seatbelt/configuration.md)
+  * [Exports & Events](free-scripts/madonne-seatbelt/exports-and-events.md)
   * [Common Errors](free-scripts/madonne-seatbelt/common-errors.md)
 * [🗑️ Delete Gun](free-scripts/delete-gun/README.md)
   * [Installation](free-scripts/delete-gun/installation.md)

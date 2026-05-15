@@ -93,7 +93,8 @@ end
 Restart your server or run the following command in the console:
 
 ```
-restart MS_Delete_Gun
+refresh
+start MS_Delete_Gun
 ```
 
 Your Delete Gun is now ready to use! ✅

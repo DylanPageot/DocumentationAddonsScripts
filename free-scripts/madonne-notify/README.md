@@ -5,50 +5,33 @@ coverY: 0
 
 # 📢 Madonne Notify
 
-_Madonne Notify_ is a lightweight notification system designed specifically for FiveM servers. Whether you're building a roleplay, freeroam, or custom game mode server, Madonne Notify provides a sleek and modern way to send real-time in-game notifications to your players.
+A lightweight and elegant notification system for your FiveM server. **Madonne Notify** displays stylish toast notifications to your players, with support for multiple types, titles, messages, sounds, and custom durations.
 
-**Key Features:**
+***
 
-* 🔔 Clean and modern UI notifications
-* ⚙️ Easy-to-use client and server-side exports
-* 🚀 Lightweight and optimized for performance
-* 🧩 Compatible with any framework (ESX, QBCore, standalone)
+## 📖 About Madonne Notify
 
+Madonne Notify is a free, plug-and-play notification resource built with **Vue 3**. Notifications appear in the **top-right corner** of the screen as animated toast cards, each color-coded and icon-tagged by type.
 
+It is natively supported by other MadonneStudio resources such as **MS\_Delete\_Gun** and **MS\_Madonne\_Seatbelt**, and can be used as a standalone notification system on any FiveM server.
 
-## **How does the script work ?**
+***
 
-Madonne Notify uses a simple and efficient client-server architecture to send in-game notifications directly to players. You can trigger notifications from either the server or the client using the provided `Notify` function.
+## ✨ Main Features
 
-#### 📦 Server-Side Usage
+* 🎨 **11 Notification Types** — Each type has its own color and icon: `success`, `error`, `warning`, `info`, `announce`, `progress`, `achievement`, `msg`, `radio`, `system`, `vehicle`
+* 🔊 **Optional Sound** — Play a built-in UI sound on notification display
+* ⏱️ **Custom Duration** — Control exactly how long each notification stays on screen
+* 📌 **Title + Message** — Display a bold title, a subtitle message, or both
+* 🎞️ **Smooth Animations** — Slide-in / slide-out transitions on every notification
+* 🧩 **Export-based API** — Trigger notifications from any resource via a simple client or server export
+* 📡 **Event-based API** — Also supports triggering via NetEvents for server-to-client notifications
+* 🆓 **Free Script** — No escrow, fully open source
 
-To send a notification from the server to a specific player:
+***
 
-```lua
--- Parameters: targetPlayer, type, title, message, duration, sound
-exports['MS_Madonne_Notify']:Notify(targetPlayer, "success", "Mission Complete", "You earned $500!", 5000, true)
-```
+## 🔗 Quick Links
 
-#### 💻 Client-Side Usage
-
-To display a notification locally on the client:
-
-```lua
--- Parameters: type, title, message, duration, sound
-exports['MS_Madonne_Notify']:Notify("error", "Access Denied", "You do not have permission to do this.", 4000, true)
-```
-
-**🎨 Notification Types & Styles**
-
-Each notification type applies a distinct style based on its category:
-
-| Type                                | Style Preview                |
-| ----------------------------------- | ---------------------------- |
-| `warning`                           | Orange border and background |
-| `info`, `progress`, `announce`      | Blue border and background   |
-| `success`, `achievement`            | Green border and background  |
-| `msg`, `system`, `radio`, `vehicle` | Gray border, neutral style   |
-
-#### 🔊 Optional Sound
-
-By setting `sound = true`, a frontend UI sound (`COLLECTED` from `HUD_AWARDS`) plays when the notification appears, adding feedback for critical or rewarding messages.
+* [📥 Installation](https://claude.ai/chat/installation.md)
+* [📡 Usage & API](https://claude.ai/chat/usage.md)
+* [❓ Common Errors](https://claude.ai/chat/common-errors.md)

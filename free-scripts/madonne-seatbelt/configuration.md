@@ -5,142 +5,171 @@ coverY: 8
 
 # Configuration
 
-The configuration file (named config.lua) allows you to modify all the different parameters taken into account within our script. In case of problems with the scripts, first check that you have correctly edited this document
+All configuration is done in `config.lua`, which is not escrowed and can be freely edited.
 
-<details>
+***
 
-<summary><em><strong>Content of the configuration file by default</strong></em></summary>
-
-```lua
-CONFIG_MADONNE_SEATBELT = {
-    -- If you want to disable the seat belts for a particular vehicle, you can enter the model of that vehicle below
-    DisableSeatbeltsForThisVehicles = {
-        "harley","blazer","blazer2","blazer3","blazer4","blazer5","verus","airtug","caddy","caddy2","caddy3","forklift","mower","tractor","bmx","cruiser","fixter","scorcher","tribike","tribike2","tribike3","gator3"
-    },
-
-    -- If you want to disable seat belts for an entire class of vehicle, you can enter the class ID below. To find the list of all vehicle classes, you can go to this address : https://docs.fivem.net/natives/?_0x29439776AAA00A62 
-    DisableSeatbeltsForThisVehcilesClasses = {
-        8,13,14,15,16,21,22
-    },
-
-    -- Change the key associated with the seat belt (default: K). To obtain the code corresponding to the key of your choice, refer to the following site: https://docs.fivem.net/docs/game-references/controls/
-    SeatbeltKey = 311,
-    EnableWhenDead = false,
-
-    -- Activate / Deactivate the display of a warning light when the belt is not fastened.
-    ShowBlinker = true,
-
-    --
-    ActivateSound = true,
-    LoopSound = true,
-    Volume = 0.8,
-
-    -- Allows you to add and configure a sound effect simulating putting on your seat belt (or taking it off)
-    EnableNotifications = true,
-    NotificationsType = "default", -- Availables values : default | custom
-    -- If NotificationsType is set to custom, you must to edit the notifs.lua file. You can ask us on Discord if you need any support about this.
-    Strings = {
-        seatbelt_on = 'Seatbelt : ~g~set',
-        seatbelt_off = 'Seatbelt : ~r~removed',
-    },
-
-    -- Sensitivity of expulsion from the vehicle in the event of impact
-    DiffTrigger = 0.325,
-    MinSpeed = 13.9,
-    VelocityMultiplicator = 1,
-    DisableEjectionWhenBreaking = true,
-
-    -- Enables and configures the launch of a small alarm when the vehicle is moving at a certain speed without the seat belt on.
-    AlarmOnlySpeed = true,
-    AlarmSpeed = 20,
-    AlarmVolume = 0.2
-}
-```
-
-</details>
-
-<details>
-
-<summary><em>Main Madonne Seatbelt Configuration</em></summary>
-
-If you want to disable the seatbelts for a particular vehicle, you can enter the model of that vehicle below.
+## 🚗 Vehicle Exclusions
 
 ```lua
 DisableSeatbeltsForThisVehicles = {
-        "harley","blazer","blazer2","blazer3","blazer4","blazer5","verus","airtug","caddy","caddy2","caddy3","forklift","mower","tractor","bmx","cruiser","fixter","scorcher","tribike","tribike2","tribike3","gator3"
-    },
-```
-
-
-
-If you want to disable the seatbelts for an entire class of vehicles, you can enter the class ID below. To find the list of all vehicle classes, you can go to [this website](https://docs.fivem.net/natives/?\_0x29439776AAA00A62).&#x20;
-
-```lua
-DisableSeatbeltsForThisVehcilesClasses = {
-        8,13,14,15,16,21,22
-    },
-```
-
-
-
-Change the key associated with the seat belt (default : K). To botain the code corresponding to the key of your choice, refer to[ the following site](https://docs.fivem.net/docs/game-references/controls/).
-
-```lua
-SeatbeltKey = 311,
-EnableWhenDead = false,
-```
-
-
-
-This parameter allows whether or not to display a visual warning when the seat belt is not fastened.
-
-```lua
-ShowBlinker = true,
-```
-
-
-
-The options below allow you to manager the sound effects when your players put on and take off their seatbelts.
-
-```lua
-ActivateSound = true,
-LoopSound = true,
-Volume = 0.8,
-```
-
-
-
-Whether or not to show a notification above the map when the belt is fastened and unfastened. You can also choose to setup your custom notification system.
-
-```lua
-EnableNotifications = true,
-NotificationsType = "default", -- Availables values : default | custom
--- If NotificationsType is set to custom, you must to edit the notifs.lua file. You can ask us on Discord if you need any support about this.
-Strings = {
-        seatbelt_on = 'Seatbelt : ~g~set',
-        seatbelt_off = 'Seatbelt : ~r~removed',
+    "harley","blazer","bmx","cruiser","gator3"
+    -- add any vehicle model name here
 },
 ```
 
+List of **specific vehicle models** for which the seatbelt system is completely disabled. Useful for bicycles, ATVs, forklifts, and similar vehicles where a seatbelt makes no sense.
 
-
-Modify via these two parameters, the sensitivity necessary to eject players who do not have seat belts attached, in the event of an accident.
-
-```lua
-DiffTrigger = 0.255,
-MinSpeed = 13.9,
-VelocityMultiplicator = 1,
-DisableEjectionWhenBreaking = true,
-```
-
-
-
-Allows you to activate and configure the presence of an audible alarm when the seat belt is not fastened and the vehicle is moving.
+***
 
 ```lua
-AlarmOnlySpeed = true,
-AlarmSpeed = 20,
-AlarmVolume = 0.2
+DisableSeatbeltsForThisVehcilesClasses = {
+    8, 13, 14, 15, 16, 21, 22
+},
 ```
 
-</details>
+List of **vehicle class IDs** for which the seatbelt system is disabled. This is the recommended way to exclude entire categories (motorcycles, boats, helicopters, planes…).
+
+> 📖 Full class list: [FiveM Natives — GetVehicleClass](https://docs.fivem.net/natives/?_0x29439776AAA00A62)
+
+***
+
+## ⌨️ Key Binding & Controls
+
+| Option                         | Type      | Description                                                           |
+| ------------------------------ | --------- | --------------------------------------------------------------------- |
+| `SeatbeltKey`                  | `string`  | Default key to toggle the seatbelt. Default: `"K"`                    |
+| `KeymapText`                   | `string`  | Label shown in the FiveM key binding settings                         |
+| `EnableWhenDead`               | `boolean` | If `true`, the seatbelt system remains active when the player is dead |
+| `Cooldown`                     | `number`  | Minimum delay in **milliseconds** between two seatbelt toggles        |
+| `LeaveVehicleWhenSeatbeltIsOn` | `boolean` | If `false`, the player cannot exit the vehicle while buckled          |
+
+***
+
+## 🖼️ Visual Warning
+
+| Option                            | Type      | Description                                                                                              |
+| --------------------------------- | --------- | -------------------------------------------------------------------------------------------------------- |
+| `ShowBlinker`                     | `boolean` | Show the seatbelt warning icon when the player is unbuckled                                              |
+| `SetBlinkerPermanent`             | `boolean` | If `true`, the icon stays visible permanently until the seatbelt is fastened. If `false`, it blinks      |
+| `ShowBlinkerWhenVehicleIsStopped` | `boolean` | Show the warning even when the vehicle is stationary                                                     |
+| `BlinkerMinSpeed`                 | `number`  | Minimum speed (km/h) to show the warning. Only applies when `ShowBlinkerWhenVehicleIsStopped` is `false` |
+
+***
+
+## 🔊 Sound
+
+| Option          | Type      | Description                                                   |
+| --------------- | --------- | ------------------------------------------------------------- |
+| `ActivateSound` | `boolean` | Play buckle/unbuckle sound effects when toggling the seatbelt |
+| `LoopSound`     | `boolean` | Enable the looping alarm when driving unbuckled               |
+| `Volume`        | `number`  | Volume of buckle/unbuckle sounds (`0.0` to `1.0`)             |
+
+***
+
+## 🔔 Notifications
+
+| Option                | Type      | Description                                                     |
+| --------------------- | --------- | --------------------------------------------------------------- |
+| `EnableNotifications` | `boolean` | Show a notification when the seatbelt is fastened or unfastened |
+| `NotificationsType`   | `string`  | Notification system to use. See values below.                   |
+
+### **Notification type values:**
+
+| Value       | Behavior                                                                                                              |
+| ----------- | --------------------------------------------------------------------------------------------------------------------- |
+| `"default"` | Uses the native GTA V notification system                                                                             |
+| `"auto"`    | Detects automatically — checks for **MS\_Madonne\_Notify** first, then **okokNotify**, then falls back to `"default"` |
+| `"custom"`  | Uses your custom handler defined in `custom/notifs.lua`                                                               |
+
+### **Notification strings:**
+
+```lua
+Strings = {
+    notification_title = "Seatbelt System",
+    seatbelt_on  = 'Seatbelt : ~g~set',
+    seatbelt_off = 'Seatbelt : ~r~removed',
+},
+```
+
+You can edit these strings to change the notification text and title.
+
+***
+
+## 💥 Ejection Physics
+
+| Option                        | Type      | Description                                                                                 |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------------- |
+| `DiffTrigger`                 | `number`  | Speed difference threshold that triggers ejection. Lower = more sensitive. Default: `0.325` |
+| `MinSpeed`                    | `number`  | Minimum vehicle speed (m/s) at which ejection can occur. Default: `13.9` (\~50 km/h)        |
+| `VelocityMultiplicator`       | `number`  | Multiplier applied to the player's ejection velocity. Higher = further ejection             |
+| `DisableEjectionWhenBreaking` | `boolean` | If `true`, ejection is disabled while the player is actively pressing the brake             |
+
+***
+
+## 🚨 Alarm
+
+| Option           | Type      | Description                                                   |
+| ---------------- | --------- | ------------------------------------------------------------- |
+| `AlarmEnabled`   | `boolean` | Enable the seatbelt alarm system                              |
+| `AlarmOnlySpeed` | `boolean` | Only trigger the alarm when the vehicle is above `AlarmSpeed` |
+| `AlarmDuration`  | `number`  | Interval in **milliseconds** between each alarm sound loop    |
+| `AlarmSpeed`     | `number`  | Minimum speed (km/h) to trigger the alarm                     |
+| `AlarmVolume`    | `number`  | Volume of the alarm sound (`0.0` to `1.0`)                    |
+
+***
+
+## 💺 Per-Seat Ejection Whitelist
+
+The `DisallowEjectionFromSeats` table lets you prevent ejection for specific **seats in specific vehicles**. This is useful for police vehicles where passengers should never be ejected.
+
+```lua
+DisallowEjectionFromSeats = {
+    DisableAlarmInThisSituations = true,
+    ["police"] = {-1, 1, 2},
+    ["policeb"] = {-1},
+}
+```
+
+| Option                         | Type      | Description                                                                    |
+| ------------------------------ | --------- | ------------------------------------------------------------------------------ |
+| `DisableAlarmInThisSituations` | `boolean` | If `true`, the alarm and blinker are also hidden for whitelisted seats         |
+| `["model"]`                    | `table`   | Vehicle model name mapped to a list of seat indexes where ejection is disabled |
+
+> 📖 Seat index reference: [FiveM Natives — GetPedInVehicleSeat](https://docs.fivem.net/natives/?_0x22AC59A870E6A669)
+>
+> `-1` = driver seat, `0` = front passenger, `1` = rear left, `2` = rear right, etc.
+
+***
+
+## 🪝 Custom Hooks — custom/main.lua
+
+Two empty functions are available in `custom/main.lua` for you to add your own logic when the seatbelt state changes:
+
+```lua
+function FastenedSeatbelt()
+    -- Called when the player fastens the seatbelt
+end
+
+function UnfastenedSeatbelt()
+    -- Called when the player unfastens the seatbelt
+end
+```
+
+***
+
+## 🔔 Custom Notifications — custom/notifs.lua
+
+Used when `NotificationsType` is set to `"custom"`. Edit the two event handlers to implement your own notification logic:
+
+```lua
+RegisterNetEvent("MS_MS_Seatbelt_Fastened_Notification")
+AddEventHandler("MS_MS_Seatbelt_Fastened_Notification", function()
+    -- Your notification for seatbelt fastened
+end)
+
+RegisterNetEvent("MS_MS_Seatbelt_Unfastened_Notification")
+AddEventHandler("MS_MS_Seatbelt_Unfastened_Notification", function()
+    -- Your notification for seatbelt unfastened
+end)
+```

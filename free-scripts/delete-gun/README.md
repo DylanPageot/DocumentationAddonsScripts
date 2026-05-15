@@ -12,6 +12,8 @@ With the Delete Gun, all you have to do is **aim and shoot** at any entity using
 
 The resource is designed to be lightweight, flexible, and compatible with most FiveM server setups.
 
+***
+
 ### ✨ Main Features
 
 * 🎯 **Aim & Shoot** — Point the configured weapon at any entity and shoot to delete it instantly

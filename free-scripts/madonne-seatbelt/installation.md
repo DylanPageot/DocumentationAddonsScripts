@@ -5,19 +5,69 @@ coverY: 0
 
 # Installation
 
-1. After purchasing for free the resource on our store, log in to Fivem's KeyMaster site ([https://keymaster.fivem.net/](https://keymaster.fivem.net/)).
-2. In the menu on the left, go to **Granted Assets** located in the **Server Owners** section.
+## 📋 Requirements
 
-<figure><img src="../../.gitbook/assets/Sans titre.png" alt=""><figcaption></figcaption></figure>
+* A **FiveM server** running on artifact `2699` or above
+* _(Optional)_ `MS_Madonne_Notify` or `okokNotify` for enhanced notifications
 
-3. In the list of resources, select the Download button corresponding to Wearable Weapon. This will download you a .zip file.
+***
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+## ⬇️ Step 1 — Download the resource
 
-4. Open the archive you just downloaded. There you will find a folder named **MS\_Wearable\_Weapons**.
-5. Drag this folder into your server's resources folder.
-6. Since the resource is already configured and ready to use, all you have to do is edit your server's configuration file (often caller _server.cfg_) and ad ensure _MS\_Wearable\_Weapons_ at the bottom of it.
+Download the latest version of **MS\_Madonne\_Seatbelt** from the [CFX Portal](https://portal.cfx.re/), the official Cfx.re platform for downloading your purchased resources.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+> 💡 You must be logged in with the account used to purchase the resource.
 
-7. Start your server and enjoy your new script !
+***
+
+## 📁 Step 2 — Add to your server
+
+Copy the `MS_Madonne_Seatbelt` folder into your server's **resources directory**.
+
+```
+your-server/
+└── resources/
+    └── MS_Madonne_Seatbelt/
+        ├── client/
+        ├── custom/
+        ├── ui/
+        ├── config.lua
+        ├── server.lua
+        └── fxmanifest.lua
+```
+
+***
+
+## 📝 Step 3 — Add to server.cfg
+
+Add the following line to your `server.cfg`, **after** any optional notification resource:
+
+```cfg
+ensure MS_Madonne_Notify   # optional, if using it for notifications
+ensure MS_Madonne_Seatbelt
+```
+
+> ⚠️ If you use `NotificationsType = "MS_Madonne_Notify"` or `"okokNotify"`, make sure those resources are started **before** MS\_Madonne\_Seatbelt.
+
+***
+
+## ⚙️ Step 4 — Configure the resource
+
+Open `config.lua` and configure the resource to match your server setup.
+
+Refer to the [⚙️ Configuration](https://claude.ai/chat/configuration.md) page for a full breakdown of every option.
+
+***
+
+## 🔄 Step 5 — Restart your server
+
+Restart your server or run the following command in the console:
+
+```
+ensure
+start MS_Madonne_Seatbelt
+```
+
+Madonne Seatbelt is now ready to use! ✅
+
+Players can fasten their seatbelt by pressing **`K`** (default) while inside a vehicle.

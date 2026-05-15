@@ -18,13 +18,13 @@
 
 **Fix:** Set it to `true` in `config/main.lua`.
 
-***
+
 
 **Cause 2:** The player doesn't have the required permissions, so the weapon is intentionally not given.
 
 **Fix:** Grant the player the correct permission (see above).
 
-***
+
 
 **Cause 3 (ESX + ox\_inventory):** The `INVENTORY` option is not set correctly.
 
