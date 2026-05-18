@@ -1,8 +1,8 @@
 # Table of contents
 
-* [About MadonneStudio](README.md)
-* [How to buy our scripts ?](how-to-buy-our-scripts.md)
-* [Need an extra support ?](need-an-extra-support.md)
+* [💜 About MadonneStudio](README.md)
+* [🛒 How to buy our scripts ?](how-to-buy-our-scripts.md)
+* [⁉️ Need an extra support ?](need-an-extra-support.md)
 
 ## 💲 Paid Scripts
 
