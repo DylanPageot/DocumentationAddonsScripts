@@ -1,6 +1,8 @@
 # Configuration
 
-## General settings
+## Default configuration file (config.lua)
+
+### General settings
 
 Set delays before initialization and before the menu opens, to ensure all data is received in time.
 
@@ -47,7 +49,7 @@ ParkingSlotDectionRange = 200,
 
 ***
 
-## Areas
+### Areas
 
 Define each spawn area with its world coordinates, detection radius, marker appearance, optional NPC model, and department restrictions.
 
@@ -77,7 +79,7 @@ Areas = {
 
 ***
 
-## Vehicle blips & ejection
+### Vehicle blips & ejection
 
 Configure whether a minimap blip appears when a vehicle is delivered, and whether unauthorized drivers are ejected.
 
@@ -93,7 +95,7 @@ Blip sprite and colour IDs are available at [docs.fivem.net](https://docs.fivem.
 
 ***
 
-## NPC mechanic per vehicle type
+### NPC mechanic per vehicle type
 
 When no nearby parking slot is found, an NPC drives the vehicle to the player. Configure the ped model used per vehicle type.
 
@@ -111,7 +113,7 @@ Vehicle type IDs are defined in `vehicles.lua`.
 
 ***
 
-## Player vehicle limits
+### Player vehicle limits
 
 Limit how many vehicles a player can have spawned simultaneously. Permission tiers can raise the limit above the default.
 
@@ -129,7 +131,7 @@ Permissions_Codes_For_Limits = {
 
 ***
 
-## Notifications
+### Notifications
 
 Accepted values: `"notification"` (default FiveM notification), `"chat"` (chat message), or `"other"` (fires the `MS_CarSpawner_Notification` client event for a custom handler).
 
@@ -140,7 +142,7 @@ Notifications_Chat_Color = {255, 255, 255},
 
 ***
 
-## Badges
+### Badges
 
 Badges display on locked vehicles in the interface. Each badge is associated with a permission code and shows a custom icon, color, and label. Icons use names from [Remix Icon](https://remixicon.com/).
 
@@ -165,7 +167,7 @@ Badges = {
 
 ***
 
-## Translations
+### Translations
 
 All in-game messages are editable in the `TRANSLATIONS` table at the bottom of `config.lua`.
 
