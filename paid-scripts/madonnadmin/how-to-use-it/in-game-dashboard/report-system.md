@@ -4,7 +4,7 @@ The in-game report system allows players to quickly contact the staff team direc
 
 ***
 
-## 📋 How to Submit a Report
+## How to Submit a Report
 
 Any player can open the report interface at any time by using the following command:
 
@@ -24,23 +24,23 @@ The report flow works in the following steps:
 
 ***
 
-## 📝 Report Types
+## Report Types
 
 Players can choose between two types of reports depending on their situation:
 
-### ⚡ Quick Reports
+### Quick Reports
 
 Quick reports are **pre-configured short messages** defined by the server administrators in the configuration files. They allow players to send a report in just one click, without typing anything.
 
 > Quick reports are fully customizable — server administrators can add, edit, or remove them freely in the config.
 
-### ✍️ Custom Reports
+### Custom Reports
 
 Custom reports allow players to **type a detailed message** to describe their issue precisely. This is the recommended option for complex situations requiring context.
 
 ***
 
-## 📬 What Happens After Submitting?
+## What Happens After Submitting?
 
 Once the report is submitted and the window is closed:
 
@@ -52,13 +52,13 @@ Once the report is submitted and the window is closed:
 
 ***
 
-## 💬 Communication with Staff
+## Communication with Staff
 
 The report system includes a **built-in messaging system** between the player and the staff member handling the report. Both parties can exchange messages directly within the report interface, without needing to use any external tool.
 
 ***
 
-## 📊 Report Status
+## Report Status
 
 Each report goes through the following status lifecycle:
 
@@ -72,7 +72,7 @@ Players are notified at each status change via the **floating notification widge
 
 ***
 
-## 🛠️ Staff Side
+## Staff Side
 
 Staff members receive a **real-time in-game notification** when a new report is submitted. They can then:
 
@@ -83,7 +83,7 @@ Staff members receive a **real-time in-game notification** when a new report is 
 * **Execute quick actions** on the reported player directly from the report panel
 * Manage all active reports from the **in-game administration panel**
 
-### ⚡ Quick Action Buttons
+### Quick Action Buttons
 
 Staff members have access to **configurable quick action buttons** directly within the report panel. These allow them to apply common moderation actions on a player in one click, without having to type any command.
 
