@@ -5,363 +5,226 @@ coverY: 0
 
 # Configuration
 
-The configuration file (named config.lua) allows you to modify all the different parameters taken into account within our script. In case of problems with the scripts, first check that you have correctly edited this document
+All configuration is done in `config.lua`, which is not escrowed and can be freely edited.
 
-<details>
+***
 
-<summary><em><strong>Content of the configuration file by default</strong></em></summary>
-
-```lua
-CONFIG_MADONNE_SEASONS = {
-
-    -- Select type of permission system used
-    PERMISSION_SYSTEM = "none",
-    -- Can be : ace | steam | custom | none
-    -- If custom is selected, you can edit the file permission.lua to 
-
-    -- if "steam" is selected above, list allowed steam users here :
-    ADMIN_USERS = {
-        "steam:1100001000056ba",
-    },
-
-    -- Change names of differents seasons
-    SEASONS_NAMES = {
-        SPRING = "Spring",
-        SUMMER = "Summer",
-        AUTUMN = "Autumn",
-        WINTER = "Winter",
-    },
-
-    -- Set the length IRL f a cycle of four seasons IG ( = 1 Year )
-    YEAR_LENGTH = "2w", -- Examples of values accepted : '3d' for 3 Days, '1w' for 1 Week, '1mo' for 1 Month
-    -- WARNING : Must be in days, weeks or months.
-
-    -- Set the length IRL of an entire day IG
-    DAY_LENGTH = "48m", -- Examples of values accepted : '20m' for 20 Minutes, '1h' for 1 Hour'
-    -- WARNING : Must b1cae in minutes or hours
-    -- DEFAULT = 48m
-
-    -- Activate or desactivate automatic weather changes
-    DYNAMIC_WEATHER = true,
-
-    -- Enable / Disable ability to access to weather forcast
-    FORCAST_ENABLED = true,
-    FORCAST_LANGUAGE = "FR", -- Name of the folder to separate every languages
-    -- WARNING : If you add a new language, you must edit fxmanifest.lua to add the ability to our script to reach your files. You can ask for support if you need it
-    FORCAST_VOLUME = 0.5,
-    
-
-    -- Change the time between each possible weather change (in minutes)
-    WEATHER_DELAY = 10,
-
-    -- Change weather probability for each (total for each season should be 100)
-    WEATHER_PROBABILITY = {
-        { -- 1 : SPRING
-            0, -- BLIZZARD
-            10, -- CLEAR
-            10, -- CLEARING
-            10, -- CLOUDS
-            15, -- EXTRASUNNY
-            5, -- FOGGY
-            10, -- NEUTRAL
-            10, -- OVERCAST
-            18, -- RAIN
-            10, -- SMOG
-            0, -- SNOW
-            0, -- SNOWLIGHT
-            2, -- THUNDER
-            0, -- XMAS
-        },
-    
-        { -- 2 : SUMMER
-            0, -- BLIZZARD
-            25, -- CLEAR
-            10, -- CLEARING
-            10, -- CLOUDS
-            30, -- EXTRASUNNY
-            0, -- FOGGY
-            10, -- NEUTRAL
-            5, -- OVERCAST
-            8, -- RAIN
-            0, -- SMOG
-            0, -- SNOW
-            0, -- SNOWLIGHT
-            2, -- THUNDER
-            0, -- XMAS
-        },
-
-        { -- 3 : AUTUMN
-            0, -- BLIZZARD
-            10, -- CLEAR
-            10, -- CLEARING
-            10, -- CLOUDS
-            15, -- EXTRASUNNY
-            3, -- FOGGY
-            10, -- NEUTRAL
-            10, --OVERCAST
-            20, --RAIN
-            2, -- SMOG
-            0, -- SNOW
-            0, -- SNOWLIGHT
-            5, -- THUNDER
-            0, -- XMAS
-        },
-
-        { -- 4 : WINTER
-            5, -- BLIZZARD
-            5, -- CLEAR
-            5,-- CLEARING
-            10,-- CLOUDS
-            5, -- EXTRASUNNY
-            5, -- FOGGY
-            5, -- NEUTRAL
-            15, --OVERCAST
-            15, --RAIN
-            5, -- SMOG
-            10, -- SNOW
-            10, -- SNOWLIGHT
-            0, -- THUNDER
-            5, -- XMAS
-        },
-    } 
-}
-
--- Change differents commands names
-COMMANDS = {
-    DynamicWeather = "dynamicweather",
-    FreezeTime = "freezetime",
-    Forcast = "forcast",
-    ChangeWeather = "changeweather",
-    ChangeTime = "changetime",
-    NextWeather = "nextweather",
-    Season = "season",
-}
-
-HELPCMD = {
-    DynamicWeather = "Enable or disable changes in weather.",
-    FreezeTime = "Enable or disable the progression of time.",
-    Forcast = "Get a weather report for tommorow.",
-    ChangeWeather = "Modify the weather for a custom one (EXTRASUNNY, CLOUDS, RAIN, THUNDER, SNOW, ...)",
-    ChangeTime = "Change the current time to a custom time (in HH:MM format).",
-    NextWeather = "Go to the next weather.",
-    Season = "Get the current season.",
-}
-
--- Change any text to your own language
-TEXT = {
-    Enabled = "ENABLED !",
-    Disabled = "DISABLED !",
-    Freeze = "FROZEN !",
-    Unfreeze = "UNFROZEN !",
-    NoPermission = "You do not have permission to do that !",
-    DynamicWeather = "Dynamic Weather is now ",
-    FreezeTime = "The time is now ",
-    WeatherChangedTo = "Weather is successfully changed to : ",
-    TimeChangedTo = "Time is successfully changed to : ",
-    WeatherChangedError = "Weather can't be changed. Please check args in your command.",
-    TimeChangedError = "Time can't be changed. Please check args and respect this : HH:MM.",
-    Season = "We are actually in ",
-}
-```
-
-</details>
-
-<details>
-
-<summary><em><strong>Main Madonne Seasons configuration</strong></em></summary>
-
-This option allows you to select the type of permission system you want to use between _ace_, _steam_, _custom_ and _none_.
+## 🔐 Permission System
 
 ```lua
 PERMISSION_SYSTEM = "none",
 ```
 
-When _ace_ is selected, you must configure your system permissions to add these :
+| Value           | Description                                                              |
+| --------------- | ------------------------------------------------------------------------ |
+| `"none"`        | All players can use admin commands. Recommended only for testing.        |
+| `"ace"`         | Uses FiveM's ACE permission system with configurable permission nodes    |
+| `"steam"`       | Restricts access to a list of Steam identifiers defined in `ADMIN_USERS` |
+| `"madonnadmin"` | Uses MadonnAdmin staff rank detection                                    |
+| `"custom"`      | Uses your own logic defined in `server/custom/sv_permission.lua`         |
 
-* madonne.dynweather : Enable or disable the dynamic weather
-* madonne.changeweather : Change the current weather
-* madonne.nextweather : Skip the current weather for the next one
-* madonne.changetime : Change the current time
-* madonne.freezetime : Enable or disable the time progression&#x20;
+**ACE permission nodes** (when `PERMISSION_SYSTEM = "ace"`):
 
-To set your custom permission system, just edit the permission.lua file. We can help you to configure that on our Discord.
+```lua
+ACE_PERMISSION = {
+    ["DynamicWeather"] = "madonne.dynweather",
+    ["ChangeWeather"]  = "madonne.changeweather",
+    ["NextWeather"]    = "madonne.nextweather",
+    ["FreezeTime"]     = "madonne.freezetime",
+    ["ChangeTime"]     = "madonne.changetime",
+},
+```
 
+Grant them in your `server.cfg`:
 
+```cfg
+add_ace group.admin madonne.dynweather allow
+add_ace group.admin madonne.changeweather allow
+add_ace group.admin madonne.nextweather allow
+add_ace group.admin madonne.freezetime allow
+add_ace group.admin madonne.changetime allow
+```
 
-If "steam" is selected bellow, you can select which user can access to all the commands.
+**Steam whitelist** (when `PERMISSION_SYSTEM = "steam"`):
 
 ```lua
 ADMIN_USERS = {
-        "steam:1100001000056ba",
+    ["steam:1100001000056ba"] = true,
 },
 ```
 
+***
 
+## 🔔 Notification System
 
-Change name of differents seasons.
+```lua
+NOTIFICATION_SYSTEM = "default",
+```
+
+| Value       | Description                                                      |
+| ----------- | ---------------------------------------------------------------- |
+| `"default"` | Uses the native GTA V notification                               |
+| `"chat"`    | Sends notifications as a chat message                            |
+| `"madonne"` | Uses MS\_Madonne\_Notify                                         |
+| `"custom"`  | Uses your custom handler in `server/custom/sv_notifications.lua` |
+
+***
+
+## 🗓️ Seasons
 
 ```lua
 SEASONS_NAMES = {
-        SPRING = "Spring",
-        SUMMER = "Summer",
-        AUTUMN = "Autumn",
-        WINTER = "Winter",
+    SPRING = "Spring",
+    SUMMER = "Summer",
+    AUTUMN = "Autumn",
+    WINTER = "Winter",
 },
 ```
 
+Customize the display names of each season. These names are used in the `/season` command response and in AI-generated forecasts.
 
+***
 
-Change the duration of a year (a four seasons cycle) and of a day in game.
+## ⏱️ Time & Season Length
 
-```lua
-YEAR_LENGTH = "2w",
-DAY_LENGTH = "48m",
-```
+| Option        | Example values          | Description                                                                                        |
+| ------------- | ----------------------- | -------------------------------------------------------------------------------------------------- |
+| `YEAR_LENGTH` | `"2w"`, `"1mo"`, `"3d"` | Real-time duration of a full four-season cycle. Accepts days (`d`), weeks (`w`), or months (`mo`). |
+| `DAY_LENGTH`  | `"48m"`, `"1h"`         | Real-time duration of a full in-game day. Accepts minutes (`m`) or hours (`h`). Default: `"48m"`.  |
 
+> 💡 A `YEAR_LENGTH` of `"2w"` means one full year (all four seasons) passes in 2 real-world weeks.
 
+***
 
-Enable or disable the dynamic weather.
+## 🌤️ Dynamic Weather
 
 ```lua
 DYNAMIC_WEATHER = true,
-```
-
-
-
-This prefixs correspond to the name that will be entered at the start of the notifications, related to this script, which will be displayed in the game.
-
-```lua
-FORCAST_ENABLED = true,
-FORCAST_LANGUAGE = "FR", -- Name of the folder to separate every languages
-FORCAST_VOLUME = 0.5,
-```
-
-
-
-Change the delay before the weather will change.
-
-```lua
 WEATHER_DELAY = 10,
 ```
 
+| Option            | Type      | Description                                                                                      |
+| ----------------- | --------- | ------------------------------------------------------------------------------------------------ |
+| `DYNAMIC_WEATHER` | `boolean` | Enable or disable automatic weather changes. Can also be toggled in-game with `/dynamicweather`. |
+| `WEATHER_DELAY`   | `number`  | Time in **minutes** between each automatic weather change.                                       |
 
+***
 
-Change all probabilities for each weather and each season.
+## 📻 Forecast System
+
+| Option                   | Type      | Description                                                                                                          |
+| ------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------- |
+| `FORCAST_ENABLED`        | `boolean` | Enable the `/forcast` command and forecast system                                                                    |
+| `FORCAST_OPENAI`         | `boolean` | Use OpenAI to generate a unique AI-voiced weather bulletin. Requires `openai_key` in `server.cfg`.                   |
+| `FORCAST_OPENAI_ALL_MAP` | `boolean` | If `true`, the AI bulletin also covers all other zones of the map, not just the player's zone                        |
+| `FORCAST_OPENAI_VOICE`   | `string`  | OpenAI TTS voice to use. Available: `alloy`, `fable`, `onyx`, `nova`. Preview at [openai.fm](https://www.openai.fm/) |
+| `FORCAST_LANGUAGE`       | `string`  | Language folder to use for pre-recorded forecasts (e.g. `"FR"`, `"EN"`). Only used when `FORCAST_OPENAI` is `false`. |
+| `FORCAST_VOLUME`         | `number`  | Playback volume of the forecast audio (`0.0` to `1.0`)                                                               |
+
+> ⚠️ AI forecast generation costs approximately **$0.001 per forecast** via the OpenAI API. This is not a MadonneStudio cost — it is billed directly to your OpenAI account.
+
+**Pre-recorded forecasts** are available for the following weather types, in both `FR` and `EN`:
+
+`BLIZZARD` · `CLEAR` · `CLEARING` · `CLOUDS` · `EXTRASUNNY` · `FOGGY` · `NEUTRAL` · `OVERCAST` · `RAIN` · `SMOG` · `SNOW` · `SNOWLIGHT` · `THUNDER`
+
+> 💡 You can add new language folders by placing `.ogg` files in `ui/forcasts/YOUR_LANGUAGE/` and registering them in `fxmanifest.lua`.
+
+***
+
+## 🌍 Weather Zones
+
+The map is divided into named zones, each with its own set of weather probabilities for each season. Each zone is identified by a list of GTA V **zone codes** (`ZoneCodes`).
 
 ```lua
-WEATHER_PROBABILITY = {
-        { -- 1 : SPRING
-            0, -- BLIZZARD
-            10, -- CLEAR
-            10, -- CLEARING
-            10, -- CLOUDS
-            15, -- EXTRASUNNY
-            5, -- FOGGY
-            10, -- NEUTRAL
-            10, -- OVERCAST
-            18, -- RAIN
-            10, -- SMOG
-            0, -- SNOW
-            0, -- SNOWLIGHT
-            2, -- THUNDER
-            0, -- XMAS
-        },
-    
-        { -- 2 : SUMMER
-            0, -- BLIZZARD
-            25, -- CLEAR
-            10, -- CLEARING
-            10, -- CLOUDS
-            30, -- EXTRASUNNY
-            0, -- FOGGY
-            10, -- NEUTRAL
-            5, -- OVERCAST
-            8, -- RAIN
-            0, -- SMOG
-            0, -- SNOW
-            0, -- SNOWLIGHT
-            2, -- THUNDER
-            0, -- XMAS
-        },
-
-        { -- 3 : AUTUMN
-            0, -- BLIZZARD
-            10, -- CLEAR
-            10, -- CLEARING
-            10, -- CLOUDS
-            15, -- EXTRASUNNY
-            3, -- FOGGY
-            10, -- NEUTRAL
-            10, --OVERCAST
-            20, --RAIN
-            2, -- SMOG
-            0, -- SNOW
-            0, -- SNOWLIGHT
-            5, -- THUNDER
-            0, -- XMAS
-        },
-
-        { -- 4 : WINTER
-            5, -- BLIZZARD
-            5, -- CLEAR
-            5,-- CLEARING
-            10,-- CLOUDS
-            5, -- EXTRASUNNY
-            5, -- FOGGY
-            5, -- NEUTRAL
-            15, --OVERCAST
-            15, --RAIN
-            5, -- SMOG
-            10, -- SNOW
-            10, -- SNOWLIGHT
-            0, -- THUNDER
-            5, -- XMAS
-        },
-    }
+WEATHER_ZONES = {
+    ["Los Santos"] = {
+        ZoneCodes = { ["DOWNT"] = true, ["HAWICK"] = true, ... },
+        SpringWeather = { ["CLEAR"] = 20, ["RAIN"] = 10, ... },
+        SummerWeather = { ["CLEAR"] = 30, ["EXTRASUNNY"] = 30, ... },
+        AutumnWeather = { ... },
+        WinterWeather = { ... },
+    },
+    ...
+    ["Default"] = { ... }
+}
 ```
 
+**Included zones out of the box:**
 
+| Zone                  | Description                                           |
+| --------------------- | ----------------------------------------------------- |
+| `Los Santos`          | The entire city of Los Santos and its surroundings    |
+| `Costal Beaches`      | Coastal and beach areas south of Los Santos           |
+| `Los Santos Hills`    | Hilly areas around Vinewood and Tongva Valley         |
+| `Grand Senora Desert` | The desert region around Sandy Shores                 |
+| `Northern Moutains`   | Mount Gordo, Mount Chiliad, and surrounding highlands |
+| `Zancudo`             | Fort Zancudo area and Lago Zancudo                    |
+| `Paleto Bay`          | The northern coastal town and surrounding forests     |
+| `Default`             | Fallback zone for any area not matched by the above   |
 
-All further lines give you the opportunity to edit (or translate) sentences sent by the script and commands.&#x20;
+**Weather probabilities** are defined as weights — the higher the number, the more likely that weather type is to appear. They do not need to sum to 100.
 
-````lua
+***
+
+## ☁️ Cloud Opacity
+
+```lua
+CLOUD_OPACITY = {
+    ["CLEAR"]      = 0.0,
+    ["RAIN"]       = 1.0,
+    ["EXTRASUNNY"] = 0.5,
+    ...
+}
+```
+
+Controls the cloud layer opacity for each weather type. Values range from `0.0` (no clouds) to `1.0` (full cloud cover). These are applied automatically when weather changes.
+
+***
+
+## 💬 Commands & Text
+
+All command names and notification texts can be customized in `config.lua`:
+
 ```lua
 COMMANDS = {
     DynamicWeather = "dynamicweather",
-    FreezeTime = "freezetime",
-    Forcast = "forcast",
-    ChangeWeather = "changeweather",
-    ChangeTime = "changetime",
-    NextWeather = "nextweather",
-    Season = "season",
+    FreezeTime     = "freezetime",
+    Forcast        = "forcast",
+    ChangeWeather  = "changeweather",
+    ChangeTime     = "changetime",
+    NextWeather    = "nextweather",
+    Season         = "season",
+    ...
 }
 
-HELPCMD = {
-    DynamicWeather = "Enable or disable changes in weather.",
-    FreezeTime = "Enable or disable the progression of time.",
-    Forcast = "Get a weather report for tommorow.",
-    ChangeWeather = "Modify the weather for a custom one (EXTRASUNNY, CLOUDS, RAIN, THUNDER, SNOW, ...)",
-    ChangeTime = "Change the current time to a custom time (in HH:MM format).",
-    NextWeather = "Go to the next weather.",
-    Season = "Get the current season.",
-}
-
--- Change any text to your own language
 TEXT = {
-    Enabled = "ENABLED !",
-    Disabled = "DISABLED !",
-    Freeze = "FROZEN !",
-    Unfreeze = "UNFROZEN !",
-    NoPermission = "You do not have permission to do that !",
-    DynamicWeather = "Dynamic Weather is now ",
-    FreezeTime = "The time is now ",
-    WeatherChangedTo = "Weather is successfully changed to : ",
-    TimeChangedTo = "Time is successfully changed to : ",
-    WeatherChangedError = "Weather can't be changed. Please check args in your command.",
-    TimeChangedError = "Time can't be changed. Please check args and respect this : HH:MM.",
-    Season = "We are actually in ",
+    Enabled              = "ENABLED !",
+    Disabled             = "DISABLED !",
+    NoPermission         = "You do not have permission to do that !",
+    WeatherChangedTo     = "Weather is successfully changed to : ",
+    TimeChangedTo        = "Time is successfully changed to : ",
+    Season               = "We are actually in ",
+    WaitForForcast       = "You will receive your weather forcast in few seconds. Please wait...",
+    ...
 }
 ```
-````
 
-</details>
+***
+
+## 🔧 Custom Handlers
+
+**Custom permissions** — `server/custom/sv_permission.lua`:
+
+```lua
+function IsAllowedToAccessStaffCommandFromCustomMethod(source)
+    -- Return true to grant access, false to deny
+end
+```
+
+**Custom notifications** — `server/custom/sv_notifications.lua`:
+
+```lua
+function CustomNotify(type, message, source)
+    -- type can be: "error", "info", "success"
+end
+```

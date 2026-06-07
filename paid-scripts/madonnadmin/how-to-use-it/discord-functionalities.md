@@ -4,15 +4,21 @@ icon: discord
 
 # Discord Functionalities
 
-To begin with, several commands can be used on your Discord.
+## 💬 Available Commands
 
-Note that the title of the different commands may differ depending on the language of the Discord.
+Once installed, the bot registers the following slash commands on your Discord server:
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+### `/infojoueur`
 
-This first command is the main tool that you will be able to use on Discord. It will allow you to access a player's basic information, their profile but also to apply sanctions to them in-game.
+Retrieves information about a specific player from your Madonn'Admin community. The bot returns a detailed embed including:
 
-
+* FiveM username
+* Total playtime
+* Join date and last connection date
+* License identifiers
+* A direct link to their **Madonn'Admin profile**
+* A **sanction preview** button
+* An **Apply a sanction** button for quick moderation actions directly from Discord
 
 <figure><img src="../../../.gitbook/assets/image (26).png" alt="" width="240"><figcaption></figcaption></figure>
 
@@ -20,16 +26,24 @@ This first command is the main tool that you will be able to use on Discord. It 
 
 <figure><img src="../../../.gitbook/assets/image (28).png" alt="" width="367"><figcaption></figcaption></figure>
 
-You can also access this information by right-clicking on the person in question, then applications and finally information.
+### `/profil`
 
-<figure><img src="../../../.gitbook/assets/image (32).png" alt="" width="300"><figcaption></figcaption></figure>
+Displays your own Madonn'Admin profile — your linked player information, rank, and community association.
 
-<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+### `/statut embed`
 
-This command allows a player to access their Madonn'Admin profile, in particular to make requests for the removal of sanctions for example, consult their number of hours, etc.
+Sends a **permanent status embed** in the current channel. This embed automatically updates to reflect the live status of your FiveM servers, showing:
 
-<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+* Server name
+* Online / Offline status
+* Number of connected players
+* The F8 connection command (`connect xxx`)
+* Last update timestamp and resource version
 
-The two status commands allow you to display server information privately or permanently/publicly.
+> 💡 This command is ideal for a dedicated `#server-status` channel. The embed updates automatically — no need to resend it.
 
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+### `/statut obtenir`
+
+Retrieves the current status of your servers on demand, without posting a permanent embed. Useful for quickly checking server status in any channel.

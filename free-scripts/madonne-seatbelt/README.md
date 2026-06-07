@@ -36,13 +36,7 @@ A **visual warning icon** blinks on-screen when the player is in a moving vehicl
 
 ## 🔗 Quick Links
 
-* [📥 Installation](https://claude.ai/chat/installation.md)
-* [⚙️ Configuration](https://claude.ai/chat/configuration.md)
-* [🧩 Exports & Events](https://claude.ai/chat/exports.md)
-* [❓ Common Errors](https://claude.ai/chat/common-errors.md)
-
-***
-
-> **Version:** 1.6.1 **Author:** MadonneStudio **Type:** Paid Script
-
-_MadonneStudio ·_ [_Discord_](https://discord.gg/madonne) _·_ [_Website_](https://madonnestudio.com/) _·_ [_contact@madonnestudio.com_](mailto:contact@madonnestudio.com)
+* [📥 Installation](installation.md)
+* [⚙️ Configuration](configuration.md)
+* [🧩 Exports & Events](exports-and-events.md)
+* [❓ Common Errors](common-errors.md)

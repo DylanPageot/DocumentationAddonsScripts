@@ -26,7 +26,7 @@ This flexibility in search criteria guarantees maximum accessibility, regardless
 
 When you perform a search for a player, the Madonn’Admin Web system will show you a structured and detailed result that will look like the example illustrated below.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 The displayed result usually includes essential information about the player, such as their username, the total time they have spent on the server, the date of their last connection as well as the date of their first connection. You will also be able to see their current status, indicating whether they are online or offline, as well as data regarding their sanction history, such as the number of Warns, Kicks, and bans they have received. In case of multiple players sharing the same nickname, the display is designed to handle this situation by allowing you to view an expanded list. By default, up to 10 profiles are displayed, but you can adjust this number to display up to 100 players to more easily browse the results and identify the desired profile. This presentation ensures clear and detailed data management, facilitating your searches even in complex situations.
 

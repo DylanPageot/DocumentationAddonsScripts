@@ -56,7 +56,7 @@ The page is divided into **four main sections**: Global Statistics, Complete Sta
 
 ### 📈 Global Statistics
 
-<figure><img src="../../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
 
 The **Global Statistics** table gives a high-level overview per server. Each row represents a server and displays the following columns:
 
@@ -77,7 +77,7 @@ The **Global Statistics** table gives a high-level overview per server. Each row
 
 ### 👥 Complete Statistics
 
-<figure><img src="../../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 The **Complete Statistics** table breaks down report activity **per staff member** across all time. Each row represents a staff member and includes:
 
@@ -104,7 +104,7 @@ The **Last Week Statistics** table focuses on the **previous week's activity** p
 
 ### 📆 Weekly History
 
-<figure><img src="../../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 Below the last week table, the **Weekly History** table displays a **week-by-week breakdown** of each staff member's report activity. Each column represents a date range (e.g. `23/03/2026 → 05/04/2026`) and shows the number of reports handled that week.
 
@@ -122,7 +122,7 @@ The evolution indicators use **color-coded arrows** to highlight trends:
 
 ### 🎫 Recent Tickets
 
-<figure><img src="../../../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 At the bottom of the page, the **Recent Tickets** table lists the latest reports submitted across all servers, ordered from most recent to oldest. For each ticket, the following information is displayed:
 

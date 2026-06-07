@@ -159,7 +159,3 @@ function GetPerms(src)
     return false
 end
 ```
-
-***
-
-_MadonneStudio ·_ [_Discord_](https://discord.gg/madonne) _·_ [_Website_](https://madonnestudio.com/) _·_ [_contact@madonnestudio.com_](mailto:contact@madonnestudio.com)

@@ -55,7 +55,7 @@ ensure MS_Madonne_Seatbelt
 
 Open `config.lua` and configure the resource to match your server setup.
 
-Refer to the [⚙️ Configuration](https://claude.ai/chat/configuration.md) page for a full breakdown of every option.
+Refer to the [⚙️ Configuration](configuration.md) page for a full breakdown of every option.
 
 ***
 

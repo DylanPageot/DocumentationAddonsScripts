@@ -5,20 +5,79 @@ coverY: 0
 
 # Installation
 
-After purchasing the resource on our store, log in to Fivem's KeyMaster site ([https://keymaster.fivem.net/](https://keymaster.fivem.net/)).
+## 📋 Requirements
 
-1. In the menu on the left, go to **Granted Assets** located in the **Server Owners** section.
+* A **FiveM server** running on artifact `2699` or above
+* _(Optional)_ `MS_Madonne_Notify` for enhanced notifications
+* _(Optional)_ An **OpenAI API key** if using AI-powered forecast generation
+* _(Optional)_ `lb-phone` if using the LB Phone weather app integration
 
-<figure><img src="../../.gitbook/assets/Sans titre.png" alt=""><figcaption></figcaption></figure>
+***
 
-3. In the list of resources, select the Download button corresponding to MadonneSeasons. This will download you a .zip file.
+## ⬇️ Step 1 — Download the resource
 
-<figure><img src="../../.gitbook/assets/image_2023-06-04_025851866.png" alt=""><figcaption></figcaption></figure>
+Download the latest version of **MS\_Madonne\_Seasons** from the [CFX Portal](https://portal.cfx.re/), the official Cfx.re platform for downloading your purchased resources.
 
-4. Open the archive you just downloaded. There you will find a folder named **MS\_Madonne\_Seasons**.
-5. Drag this folder into your server's resources folder.
-6. Since the resource is already configured and ready to use, all you have to do is edit your server's configuration file (often caller _server.cfg_) and ad ensure _MS\_Madonne\_Seasons_ at the bottom of it.
+> 💡 You must be logged in with the account used to purchase the resource.
 
-<figure><img src="../../.gitbook/assets/image_2023-06-03_143330598.png" alt=""><figcaption></figcaption></figure>
+***
 
-7. Start your server and enjoy your new script !
+## 📁 Step 2 — Add to your server
+
+Copy the `MS_Madonne_Seasons` folder into your server's **resources directory**.
+
+```
+your-server/
+└── resources/
+    └── MS_Madonne_Seasons/
+        ├── client/
+        ├── server/
+        │   └── custom/
+        ├── ui/
+        ├── config.lua
+        └── fxmanifest.lua
+```
+
+***
+
+## 📝 Step 3 — Add to server.cfg
+
+Add the following line to your `server.cfg`:
+
+```cfg
+ensure MS_Madonne_Seasons
+```
+
+If you plan to use **AI-powered forecasts**, also add your OpenAI API key:
+
+```cfg
+set openai_key "sk-your-openai-api-key-here"
+```
+
+> ⚠️ Make sure `MS_Madonne_Seasons` is started **after** any notification resource it depends on (`MS_Madonne_Notify`, etc.).
+
+***
+
+## ⚙️ Step 4 — Configure the resource
+
+Open `config.lua` and configure the resource to match your server setup.
+
+Refer to the [⚙️ Configuration](configuration.md) page for a full breakdown of every option.
+
+***
+
+## 🔄 Step 5 — Restart your server
+
+Restart your server or run the following command in the console:
+
+```
+restart MS_Madonne_Seasons
+```
+
+Madonne Seasons is now active! ✅
+
+***
+
+## 📱 Step 6 — LB Phone integration _(optional)_
+
+If you use **lb-phone** and want the weather app to reflect Madonne Seasons data, refer to the [📱 Compatibility](compatibility.md) page for the two files to edit.

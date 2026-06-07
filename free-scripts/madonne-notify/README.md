@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/Voyage Photo Général Linkedin Bannière (1) (1).png
+cover: ../../.gitbook/assets/Voyage Photo Général Linkedin Bannière (1).png
 coverY: 0
 ---
 
@@ -32,6 +32,6 @@ It is natively supported by other MadonneStudio resources such as **MS\_Delete\_
 
 ## 🔗 Quick Links
 
-* [📥 Installation](https://claude.ai/chat/installation.md)
-* [📡 Usage & API](https://claude.ai/chat/usage.md)
-* [❓ Common Errors](https://claude.ai/chat/common-errors.md)
+* [📥 Installation](installation.md)
+* [📡 Usage & API](usage-and-api.md)
+* [❓ Common Errors](common-errors.md)

@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/Voyage Photo Général Linkedin Bannière (17).png
+cover: ../../.gitbook/assets/Voyage Photo Général Linkedin Bannière.png
 coverY: 0
 ---
 

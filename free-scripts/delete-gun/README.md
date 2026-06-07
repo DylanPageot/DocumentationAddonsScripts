@@ -2,7 +2,7 @@
 
 Do you want to offer your administrators a simple, effective, and fun solution for deleting abandoned vehicles, peds, or any entity on the map? The **Delete Gun** is available for free!
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -14,7 +14,7 @@ The resource is designed to be lightweight, flexible, and compatible with most F
 
 ***
 
-### ✨ Main Features
+## ✨ Main Features
 
 * 🎯 **Aim & Shoot** — Point the configured weapon at any entity and shoot to delete it instantly
 * 🔫 **Configurable Weapon** — Choose any weapon model to use as the delete gun
@@ -27,8 +27,8 @@ The resource is designed to be lightweight, flexible, and compatible with most F
 
 ***
 
-### 🔗 Quick Links
+## 🔗 Quick Links
 
-* [📥 Installation](https://claude.ai/chat/installation.md)
-* [⚙️ Configuration](https://claude.ai/chat/configuration.md)
-* [❓ Common Errors](https://claude.ai/chat/common-errors.md)
+* [📥 Installation](installation.md)
+* [⚙️ Configuration](configuration.md)
+* [❓ Common Errors](common-errors.md)

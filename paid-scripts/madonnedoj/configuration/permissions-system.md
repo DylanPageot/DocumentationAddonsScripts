@@ -33,7 +33,7 @@ The system has **10 distinct permissions**:
 {% hint style="danger" %}
 DON'T FORGET TO SAVE
 
-![](<../../../.gitbook/assets/image (47).png>)
+<img src="../../../.gitbook/assets/image (47) (1).png" alt="" data-size="original">
 {% endhint %}
 
 ## Management Interface

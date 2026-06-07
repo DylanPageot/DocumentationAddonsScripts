@@ -5,20 +5,37 @@ coverY: 0
 
 # ⛅ Madonne Seasons
 
-Are you tired of the weather repeating itself in a simple way and without dynamism ? With MadonneSeasons, add a new dimension to weather management on your server.
-
-<figure><img src="../../.gitbook/assets/vlcsnap-2023-05-30-11h33m31s478.png" alt=""><figcaption></figcaption></figure>
-
-### How to use it ?
-
-Depending on your configuration options, the script will calculate the duration of four different seasons : summer, fall, winter and spring. Depending on these different seasons, the script will calculate a longer or shorter sunshine duration while taking into account the probabilities of weather conditions consistent with your wishes.
-
-Your players will also have the option to launch a weather report, announcing the weather for the next day in-game.
-
-<figure><img src="../../.gitbook/assets/vlcsnap-2023-06-03-14h29m08s961.png" alt=""><figcaption></figcaption></figure>
-
-
-
-### Showcase Video
+Change the way weather and time are handled on your FiveM server. **Madonne Seasons** brings a fully dynamic, realistic, and configurable weather and time system — with seasonal cycles, per-zone weather, AI-powered forecasts, and much more.
 
 {% embed url="https://www.youtube.com/watch?v=geiYTJQoLEo" %}
+
+***
+
+## 📖 About Madonne Seasons
+
+Madonne Seasons replaces GTA V's default static weather system with a living, breathing environment. Weather evolves dynamically over time, follows realistic transition rules, and varies by geographic zone across the map. Days are longer in summer, shorter in winter, and the sun rises and sets accordingly.
+
+## ✨ Main Features
+
+* 🗓️ **Seasonal Cycle** — Four seasons (Spring, Summer, Autumn, Winter) with configurable real-time duration (days, weeks, months)
+* 🌍 **Per-Zone Weather** — The map is divided into 7+ geographic zones, each with its own weather probabilities per season
+* ⏱️ **Realistic Time System** — Day/night cycle with variable speed: days are longer or shorter depending on the current season
+* ☀️ **Dynamic Sunrise & Sunset** — Sunrise and sunset hours shift throughout the year based on seasonal progression
+* 🌤️ **Dynamic Weather Transitions** — Weather changes follow realistic transition rules (e.g. RAIN → THUNDER → CLEARING)
+* 📻 **Weather Forecast System** — Players can request tomorrow's weather forecast via a command, delivered as an audio broadcast
+* 🤖 **AI-Powered Forecasts** — Optional OpenAI integration generates unique, voiced weather bulletins in any language using GPT-4o-mini and TTS
+* 🔐 **Flexible Permission System** — Supports ACE, Steam, MadonnAdmin, or a fully custom permission handler
+* 🔔 **Notification System** — Compatible with `default`, `chat`, `MS_Madonne_Notify`, or a custom handler
+* 📱 **LB Phone Compatibility** — Native integration with the LB Phone weather app for consistent time, temperature, forecasts, precipitation, and sun times
+* 🧩 **Developer Exports** — `GetZonePredictions` and `GetSunTimes` exports for integration with other resources
+
+***
+
+## 🔗 Quick Links
+
+* [📥 Installation](installation.md)
+* [⚙️ Configuration](configuration.md)
+* [💻 Commands](commands.md)
+* [🧩 Exports & Events](exports-and-events.md)
+* [📱 Compatibility](compatibility.md)
+* [❓ Common Errors](common-errors.md)

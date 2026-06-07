@@ -52,7 +52,7 @@ ensure MS_Delete_Gun
 
 Open `config/main.lua` and configure the resource to match your server setup.
 
-Refer to the [⚙️ Configuration](https://claude.ai/chat/configuration.md) page for a full breakdown of every option.
+Refer to the [⚙️ Configuration](configuration.md) page for a full breakdown of every option.
 
 ***
 

@@ -1,45 +1,121 @@
 # First Launch
 
-## Payment
 
-When paying, it is imperative to provide a valid email address. This step is essential, as all information relating to the use of Madonn’Admin will be sent to this address. If you encounter a problem or have any questions, do not hesitate to contact our support via [Discord](https://discord.gg/madonne), where rapid assistance will be provided.
 
-Make sure that the address entered is correct and accessible, so as not to miss any important communication. After validating your payment, an email will be automatically sent by our service (from noreply@madonnadmin.com) to the address provided. In the event that the email is not sent to you, please check that it has not been filtered into your junk mail or spam. If you still do not receive the email within a few minutes of validating the payment, contact our support without hesitation.
+Before installing the resource on your server, you need to create and configure your **Madonn'Admin community** on the web platform. This step is required — the resource cannot load without a valid server token linked to an active subscription.
 
-Keep the email received carefully, as it contains crucial information such as your identifiers or direct links to the documentation pages.
+***
 
-## Creating an account
+## 💳 Payment
 
-When you have all your data linked to Madonn’Admin, you will be asked to create an account if this is not already done via the following link (insert link). This account will be the main entry point to manage your server. Once connected, your account will be automatically associated with your community.
+When subscribing, it is imperative to **provide a valid email address**. All information relating to your Madonn'Admin account will be sent to this address.
 
-It is important to keep your community ID safe. This identifier is unique and will be necessary for various administrative actions. This Token will be in the email sent by our services and will be presented in this form “x000xx0xx0xxx0xx00xx0xx0xx000xxx” but can also be found from your community settings, on Madonn’Admin.
+After validating your payment, a confirmation email will be automatically sent by our service from **noreply@madonnadmin.com**. This email contains crucial information such as your credentials, your **community token**, and direct links to the documentation.
 
-## Main Settings
+> 💡 If you do not receive the email within a few minutes, check your spam or junk mail folder. If you still cannot find it, contact our support on Discord immediately.
 
-Once registered on Madonn’Admin, you will be guided through the initial setup by following the detailed instructions available in the [official documentation pages](configuration/dashboard-configuration/community-settings.md). These global settings are essential to ensure smooth operation and fully adapted to the needs of your community.
+Keep this email somewhere safe — you will need it to set up your community.
 
-Once this setup is complete, you will be able to [create your server](configuration/dashboard-configuration/manage-servers.md) on Madonn’Admin. This step is the foundation of managing your community, by defining the basic structure.
+***
 
-After establishing your server, you will need to [create the necessary roles](configuration/dashboard-configuration/manage-permissions.md) for your moderators. These roles are crucial to effectively delegate responsibilities and maintain a clear organization within your team.&#x20;
+## 👤 Step 1 — Create your account
 
-In parallel, Madonn’Admin allows you to add members to your staff. This feature allows you to associate a player with your server, thus simplifying the tracking of their interactions and activities. You will also be able to assign specific roles to each player based on their responsibilities and the permissions you wish to grant them. These key steps ensure optimal and structured management of your community from the start.
+Once you have received your email, create your Madonn'Admin account at [**madonnadmin.com**](https://madonnadmin.com/). This account is the main entry point to manage your server, your staff, and your community settings.
 
-## Add a new staff member
+Once logged in, your account will be **automatically associated with your community**.
 
-To add a player as a staff member in your community via Madonn’Admin, several conditions must be met and specific steps must be followed. These conditions guarantee a correct and secure association between the player and his profile on Madonn’Admin.
+***
 
-First, the player must have connected at least once to your server. This initial connection is essential, because it allows Madonn’Admin to recognize the player and automatically generate his profile in the platform.
+## 🔑 Step 2 — Retrieve your Community Token
 
-Once this step is completed, you will need to send the player the community token associated with your community. This token, which is a unique key sent by our services when registering your community, must be entered correctly by the player in the settings of their Madonn’Admin account. This process is essential to establish a secure connection between the player and your community.
+Your **Community Token** is a unique identifier required for various administrative actions. It was included in the email sent by our services and looks like this:
 
-After the player has been identified by Madonn’Admin through their initial connection and the token has been correctly entered, you can finalize the association. Go to the player’s Madonn’Admin profile: a box appears under their nickname, indicating the nickname linked to their Madonn’Admin account. By clicking on this box, you can officially add the player to your community as staff.
+```
+x000xx0xx0xxx0xx00xx0xx0xx000xxx
+```
+
+It can also be found at any time in your **community settings** on the Madonn'Admin dashboard. Keep it safe and never share it publicly.
+
+***
+
+## ⚙️ Step 3 — Initial setup
+
+Once registered, follow the initial setup steps on the dashboard:
+
+* Configure your **community name** — this is displayed in-game as the prefix in notifications and staff chat messages
+* Set your **language** (English, French, or Spanish)
+* Set your **timezone** — used for accurate log timestamps
+
+***
+
+## 🖥️ Step 4 — Add your server
+
+In the dashboard, navigate to **Servers** and add a new server. Fill in:
+
+* The **server name**
+* The **public IP address** of your FiveM server
+
+> ⚠️ The IP address must match exactly the one your FiveM server is running on. An incorrect IP will prevent the resource from authenticating.
+
+Once created, your **Server Token** will be generated. Copy it — you will need it in `config/cfg_main.lua` (see [📥 Installation](script-installation.md)).
+
+***
+
+## 🎭 Step 5 — Create your staff roles
+
+In **Roles**, create the ranks for your moderation team. For each role you can configure:
+
+* The **role name** and **display color** (shown on nametags and in the staff list)
+* The **rank order**
+* **Per-permission toggles** — teleportations, spectate, god mode, submarine mode, delete radius, broadcast, and more
+
+> 💡 Rank `-1` is the **super admin** rank and bypasses all permission checks. Rank `0` means the player has no staff access.
+
+***
+
+## 👮 Step 6 — Add staff members
+
+Adding a player as a staff member requires a few steps to ensure a secure and correct association.
+
+**Requirements before adding a staff member:**
+
+* The player must have **connected at least once** to your server. This initial connection allows Madonn'Admin to recognize the player and automatically generate their profile on the platform.
+* You must send the player your **Community Token** (see Step 2). The player must enter this token in the settings of their own Madonn'Admin account to link themselves to your community.
+
+**How to finalize the association:**
+
+Once the player has connected and entered the token, go to their **Madonn'Admin profile**. A box will appear under their username, showing the name linked to their account. Click on this box to officially add the player to your community as a staff member.
 
 <figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
-This action creates a permanent link between the player and your community management, allowing you to assign them a role and manage their permissions. If you later wish to break this link, simply click on the "trash can" icon to delete the association.
+This creates a permanent link between the player and your community. If you later wish to remove this link, click the **trash icon** to delete the association.
 
-At this point, although the player is now linked to your community, they do not yet have a specific role. To assign them a role that you have previously created (see the Madonn'Admin Configuration section for more details), the procedure is simple. Access the "Team Staffs" category on your Madonn'Admin interface, then go to the "Manage Staffs" section. Once in this space, you can select the server on which you wish to assign permissions, indicate the nickname of the staff concerned, and choose the role you wish to assign them. This approach ensures that each staff member has the appropriate rights to fulfill their functions within your community while maintaining a clear and structured organization.
+***
+
+## 🏷️ Step 7 — Assign a role to a staff member
+
+At this point, the staff member is linked to your community but does not yet have a specific role. To assign one:
+
+* Go to **Team Staffs** → **Manage Staffs** in the dashboard
+* Select the **server** on which you want to assign the permissions
+* Enter the **username** of the staff member
+* Choose the **role** to assign
+
+This ensures each staff member has the appropriate permissions to fulfill their functions while maintaining a clear and structured organization within your team.
 
 <figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
-Be sure to follow the official documentation to avoid any misunderstanding or problem when associating players to your community. In case of problems, we invite you to contact us via our discord. By following these steps, you will be able to easily add players to your staff and effectively manage their role and permissions via Madonn’Admin.
+***
+
+## 📣 Step 8 — Configure broadcasts & announcements _(optional)_
+
+In **Broadcasts**, pre-save server-wide message templates that staff can send with a single click from the in-game dashboard.
+
+In **Announcements**, post staff-facing messages that appear on the admin panel homepage — useful for shift instructions, event reminders, or moderation guidelines.
+
+***
+
+## ✅ You're ready
+
+Your community, server, roles, and staff are now configured. Proceed to the [📥 Installation](script-installation.md) page to set up the resource on your FiveM server.
+
