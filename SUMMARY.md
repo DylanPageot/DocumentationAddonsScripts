@@ -4,6 +4,13 @@
 * [🛒 How to buy our scripts ?](how-to-buy-our-scripts.md)
 * [⁉️ Need an extra support ?](need-an-extra-support.md)
 
+## 💼 SERVICES
+
+* [📈 Audits](services/audits/README.md)
+  * [💼 Offers & Pricing](services/audits/offers-and-pricing.md)
+  * [🖥️ Client Space](services/audits/client-space.md)
+  * [❓ F.A.Q.](services/audits/f.a.q..md)
+
 ## 💲 Paid Scripts
 
 * [🔨 Madonn'Admin](paid-scripts/madonnadmin/README.md)
